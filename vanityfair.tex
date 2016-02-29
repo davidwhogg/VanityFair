@@ -1,6 +1,9 @@
 % This document is a LaTeX-ification of a document in the Public Domain.
 % LaTeX-ification by David W. Hogg (NYU).
 
+% WARNING: DO NOT USE THIS FILE:
+% YOUR EYES WILL BURN.
+
 % to-do list:
 % -----------
 % - typeset titlepage and other front matter.
@@ -12,8 +15,7 @@
 % - almost all foreign punctuation from my edition has been eradicated here... fix these!
 % - decide how to typeset money amounts -- there are inconsistencies now.
 % - fix pagination so the title page is actually and really page 1 and the 135th page of the PDF file is page 135...
-% - kill the all-caps headers; decide what to do about headers in general.
-% - fix endmatter headers.
+% - decide what to do about headers and footers.
 % - find all HOGG in text and fix.
 
 \documentclass[12pt]{book}
@@ -25,12 +27,16 @@
 
 % word typesetting
 \newcommand{\foreign}[1]{\textsl{#1}}
+\renewcommand{\MakeUppercase}[1]{{#1}}
+\renewcommand\thechapter{\Roman{chapter}}
 
 \begin{document}
 
 \begin{titlepage}
 \chapter*{Vanity Fair}
-\section*{by William Makepeace Thackeray}
+\section*{A Novel Without a Hero}
+~
+\subsection*{by William Makepeace Thackeray}
 ~
 \end{titlepage}
 
@@ -45,8 +51,13 @@ I don't even know when it was written!
 
 \end{centering}
 
+\clearpage
+\tableofcontents
+
 \mainmatter
 \chapter*{Before the Curtain}
+\markboth{Before the Curtain}{\rightmark}
+\addcontentsline{toc}{chapter}{Before the Curtain}
 
 As the manager of the Performance sits before the curtain on the boards
 and looks into the Fair, a feeling of profound melancholy comes over
@@ -54,11 +65,11 @@ him in his survey of the bustling place. There is a great quantity of
 eating and drinking, making love and jilting, laughing and the
 contrary, smoking, cheating, fighting, dancing and fiddling; there are
 bullies pushing about, bucks ogling the women, knaves picking pockets,
-policemen on the look-out, quacks (OTHER quacks, plague take them!)
+policemen on the look-out, quacks (\emph{other} quacks, plague take them!)
 bawling in front of their booths, and yokels looking up at the
 tinselled dancers and poor old rouged tumblers, while the
 light-fingered folk are operating upon their pockets behind. Yes, this
-is VANITY FAIR; not a moral place certainly; nor a merry one, though
+is \textsc{Vanity Fair}; not a moral place certainly; nor a merry one, though
 very noisy.  Look at the faces of the actors and buffoons when they
 come off from their business; and Tom Fool washing the paint off his
 cheeks before he sits down to dinner with his wife and the little Jack
@@ -106,7 +117,9 @@ the end of this singular performance.
 And with this, and a profound bow to his patrons, the Manager retires,
 and the curtain rises.
 
-London, June 28, 1848
+\smallskip
+\noindent
+\textsc{London} \hfill June 28, 1848
 
 %% HOGG: Use the following to check that the Chapters are complete and
 %% numbered correctly in the LaTeX output.
