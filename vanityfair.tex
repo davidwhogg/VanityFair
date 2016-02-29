@@ -6,20 +6,25 @@
 
 % to-do list:
 % -----------
-% - typeset titlepage and other front matter.
 % - fix all occurences of all-caps.
-% - set spacing and fonts and etc.
 % - check and deal with all-caps words and phrases
-% - find quoted letters and notes and set them properly with margins.
+% - make a blockquote environment consistent with Bringhurst.
+% - find quoted correspondence and notes and set them properly with margins.
 % - almost all italics from my edition have been eradicated here... fix these?
 % - almost all foreign punctuation from my edition has been eradicated here... fix these!
+% - develop a policy about what foreign words get \foreign{} -- eg, place names?
 % - decide how to typeset money amounts -- there are inconsistencies now.
-% - fix pagination so the title page is actually and really page 1 and the 135th page of the PDF file is page 135...
 % - find all HOGG in text and fix.
 
-\documentclass[9pt, a5paper]{book}
+\documentclass[10pt, a5paper]{book}
 \usepackage{fancyhdr, textgreek}
 \usepackage[a5paper]{geometry}
+\usepackage{tocloft}
+% \usepackage[tocfullflat]{tocstyle}
+
+% fonts
+\renewcommand{\bfseries}{\relax} % remove all bold forever
+\renewcommand{\sffamily}{\relax} % remove all sans-serif forever
 
 % spacings
 \geometry{hmargin={2cm, 2cm}}
@@ -30,12 +35,25 @@
 % header hacking
 \renewcommand{\MakeUppercase}[1]{{#1}}
 \pagestyle{fancy}
-\renewcommand{\thechapter}{\Roman{chapter}}
-\renewcommand{\chaptermark}[1]{\markboth{~}{\thechapter.~#1}}
-\fancyhead[LE]{{\footnotesize{\textit{Vanity Fair} \ by William Makepeace Thackeray}}}
+\renewcommand{\thechapter}{\Roman{chapter}.}
+\renewcommand{\chaptermark}[1]{\markboth{~}{\thechapter~#1}}
+\fancyhead[LE]{{\footnotesize{\textit{Vanity Fair} by William Makepeace Thackeray}}}
 \fancyhead[RE]{}
 \fancyhead[LO]{}
 \fancyhead[RO]{{\footnotesize\rightmark}}
+
+% toc hacking
+\newlength{\nnn}
+\settowidth{\nnn}{~999}
+\cftsetpnumwidth{\nnn}
+\newlength{\XXXVIII}
+\settowidth{\XXXVIII}{XXXVIII.~}
+\renewcommand{\cftchapnumwidth}{\XXXVIII}
+\setlength{\cftbeforepartskip}{0ex}
+\setlength{\cftbeforechapskip}{0ex}
+% \usetocstyle{noonewithdot}
+% \usetocstyle{nopagecolumn}
+% \settocfeature{entryvskip}{0ex}
 
 % word typesetting
 \newcommand{\foreign}[1]{\textsl{#1}}
@@ -76,7 +94,8 @@ All content is in the Public Domain.
 \vfill
 
 This book has no ISBN. \\
-It is a one-off original made by hand by David W. Hogg.
+It is a one-off original \emph{made by hand} by David W. Hogg. \\
+See the end matter starting on page~\pageref{about} for more information.
 
 \vfill
 ~
@@ -86,12 +105,12 @@ It is a one-off original made by hand by David W. Hogg.
 ~\thispagestyle{plain}
 
 %% HOGG: If you want a table of contents, you are going to have to work for it
-%% \clearpage
-%% \tableofcontents
+\cleardoublepage
+\tableofcontents
 
 \chapter*{Before the Curtain}
 \markboth{~}{Before the Curtain}
-\addcontentsline{toc}{chapter}{Before the Curtain}
+\addcontentsline{toc}{chapter}{\rule{\XXXVIII}{0ex}Before the Curtain}
 
 As the manager of the Performance sits before the curtain on the boards
 and looks into the Fair, a feeling of profound melancholy comes over
@@ -380,14 +399,14 @@ twelve intimate and bosom friends out of the twenty-four young ladies.
 Even envious Miss Briggs never spoke ill of her; high and mighty Miss
 Saltire (Lord Dexter's granddaughter) allowed that her figure was
 genteel; and as for Miss Swartz, the rich woolly-haired mulatto from
-St. Kitt's, on the day Amelia went away, she was in such a passion of
+St.\ Kitt's, on the day Amelia went away, she was in such a passion of
 tears that they were obliged to send for Dr. Floss, and half tipsify
 her with salvolatile.  Miss Pinkerton's attachment was, as may be
 supposed from the high position and eminent virtues of that lady, calm
 and dignified; but Miss Jemima had already whimpered several times at
 the idea of Amelia's departure; and, but for fear of her sister, would
 have gone off in downright hysterics, like the heiress (who paid
-double) of St. Kitt's.  Such luxury of grief, however, is only allowed
+double) of St.\ Kitt's.  Such luxury of grief, however, is only allowed
 to parlour-boarders. Honest Jemima had all the bills, and the washing,
 and the mending, and the puddings, and the plate and crockery, and the
 servants to superintend.  But why speak about her?  It is probable that
@@ -2123,7 +2142,7 @@ think one of the daughters would be a good spec for me, Ma'am?''
 your yellow face?''
 
 ``Mine a yellow face? Stop till you see Dobbin.  Why, he had the yellow
-fever three times; twice at Nassau, and once at St. Kitts.''
+fever three times; twice at Nassau, and once at St.\ Kitts.''
 
 ``Well, well; yours is quite yellow enough for us.  Isn't it, Emmy?''
 Mrs.\ Sedley said: at which speech Miss Amelia only made a smile and a
@@ -2467,7 +2486,7 @@ them as they retreated, and hiccupped out ``Bless you! Bless you!'' Then,
 seizing Captain Dobbin's hand, and weeping in the most pitiful way, he
 confided to that gentleman the secret of his loves.  He adored that
 girl who had just gone out; he had broken her heart, he knew he had, by
-his conduct; he would marry her next morning at St. George's, Hanover
+his conduct; he would marry her next morning at St.\ George's, Hanover
 Square; he'd knock up the Archbishop of Canterbury at Lambeth: he
 would, by Jove! and have him in readiness; and, acting on this hint,
 Captain Dobbin shrewdly induced him to leave the gardens and hasten to
@@ -3047,7 +3066,7 @@ fat widow with the brandy-bottle, took their places inside---how the
 porter asked them all for money, and got sixpence from the gentleman
 and five greasy halfpence from the fat widow---and how the carriage at
 length drove away---now threading the dark lanes of Aldersgate, anon
-clattering by the Blue Cupola of St. Paul's, jingling rapidly by the
+clattering by the Blue Cupola of St.\ Paul's, jingling rapidly by the
 strangers' entry of Fleet-Market, which, with Exeter 'Change, has now
 departed to the world of shadows---how they passed the White Bear in
 Piccadilly, and saw the dew rising up from the market-gardens of
@@ -3946,7 +3965,7 @@ much during the season in London, she went to Harrowgate or Cheltenham
 for the summer.  She was the most hospitable and jovial of old vestals,
 and had been a beauty in her day, she said. (All old women were
 beauties once, we very well know.) She was a bel esprit, and a dreadful
-Radical for those days.  She had been in France (where St. Just, they
+Radical for those days.  She had been in France (where St.\ Just, they
 say, inspired her with an unfortunate passion), and loved, ever after,
 French novels, French cookery, and French wines.  She read Voltaire,
 and had Rousseau by heart; talked very lightly about divorce, and most
@@ -4322,7 +4341,7 @@ if I cared a fig about my pupils!
 Your India muslin and your pink silk, dearest Amelia, are said to
 become me very well.  They are a good deal worn now; but, you know, we
 poor girls can't afford des fraiches toilettes.  Happy, happy you! who
-have but to drive to St. James's Street, and a dear mother who will
+have but to drive to St.\ James's Street, and a dear mother who will
 give you any thing you ask.  Farewell, dearest girl,
 
 Your affectionate Rebecca.
@@ -4669,7 +4688,7 @@ passed ``long mornings'' with them---the most dreary and serious of
 forenoons.  She drove out solemnly in their great family coach with
 them, and Miss Wirt their governess, that raw-boned Vestal.  They took
 her to the ancient concerts by way of a treat, and to the oratorio, and
-to St. Paul's to see the charity children, where in such terror was she
+to St.\ Paul's to see the charity children, where in such terror was she
 of her friends, she almost did not dare be affected by the hymn the
 children sang.  Their house was comfortable; their papa's table rich
 and handsome; their society solemn and genteel; their self-respect
@@ -4858,7 +4877,7 @@ bottle-nosed Bullock Senior; and devoted her beautiful existence to his
 happiness with perfect modesty---only the old gentleman was married
 already; so she bestowed her young affections on the junior partner.
 Sweet, blooming, orange flowers!  The other day I saw Miss Trotter
-(that was), arrayed in them, trip into the travelling carriage at St.
+(that was), arrayed in them, trip into the travelling carriage at St.\ %
 George's, Hanover Square, and Lord Methuselah hobbled in after. With
 what an engaging modesty she pulled down the blinds of the chariot---the
 dear innocent!  There were half the carriages of Vanity Fair at the
@@ -4890,7 +4909,7 @@ While under this overpowering impression, Miss Amelia neglected her
 twelve dear friends at Chiswick most cruelly, as such selfish people
 commonly will do.  She had but this subject, of course, to think about;
 and Miss Saltire was too cold for a confidante, and she couldn't bring
-her mind to tell Miss Swartz, the woolly-haired young heiress from St.
+her mind to tell Miss Swartz, the woolly-haired young heiress from St.\ %
 Kitt's.  She had little Laura Martin home for the holidays; and my
 belief is, she made a confidante of her, and promised that Laura should
 come and live with her when she was married, and gave Laura a great
@@ -4945,7 +4964,7 @@ For some time George strove to keep the liaison a secret.  There was a
 woman in the case, that he admitted. ``And not the first either,'' said
 Ensign Spooney to Ensign Stubble.  ``That Osborne's a devil of a fellow.
 There was a judge's daughter at Demerara went almost mad about him;
-then there was that beautiful quadroon girl, Miss Pye, at St.
+then there was that beautiful quadroon girl, Miss Pye, at St.\ %
 Vincent's, you know; and since he's been home, they say he's a regular
 Don Giovanni, by Jove.''
 
@@ -5039,7 +5058,7 @@ me lately that I'm --------- if I'll bear it any more.''
 
 ``What have I done? I've told you you were neglecting a sweet girl,
 George.  I've told you that when you go to town you ought to go to her,
-and not to the gambling-houses about St. James's.''
+and not to the gambling-houses about St.\ James's.''
 
 ``You want your money back, I suppose,'' said George, with a sneer.
 
@@ -6715,7 +6734,7 @@ bore her affliction, made Miss Crawley much more tender than usual.  An
 event of this nature, a marriage, or a refusal, or a proposal, thrills
 through a whole household of women, and sets all their hysterical
 sympathies at work.  As an observer of human nature, I regularly
-frequent St. George's, Hanover Square, during the genteel marriage
+frequent St.\ George's, Hanover Square, during the genteel marriage
 season; and though I have never seen the bridegroom's male friends give
 way to tears, or the beadles and officiating clergy any way affected,
 yet it is not at all uncommon to see women who are not in the least
@@ -7150,7 +7169,7 @@ the instrument for his own use.
 
 In a word, it arrived that evening at a wonderful small cottage in a
 street leading from the Fulham Road---one of those streets which have
-the finest romantic names---(this was called St. Adelaide Villas,
+the finest romantic names---(this was called St.\ Adelaide Villas,
 Anna-Maria Road West), where the houses look like baby-houses; where
 the people, looking out of the first-floor windows, must infallibly, as
 you think, sit with their feet in the parlours; where the shrubs in the
@@ -8442,7 +8461,7 @@ sate thrumming on his papers and fumbling at the worn red tape.
 man ever have speculated upon the return of that Corsican scoundrel
 from Elba?  When the allied sovereigns were here last year, and we gave
 'em that dinner in the City, sir, and we saw the Temple of Concord, and
-the fireworks, and the Chinese bridge in St. James's Park, could any
+the fireworks, and the Chinese bridge in St.\ James's Park, could any
 sensible man suppose that peace wasn't really concluded, after we'd
 actually sung Te Deum for it, sir?  I ask you, William, could I suppose
 that the Emperor of Austria was a damned traitor---a traitor, and
@@ -9113,7 +9132,7 @@ under an umbrella, and the valet mounted on the box, cursing the rain
 and the dampness of the coachman who was steaming beside him.  ``We
 shall find a better trap than this at the church-door,'' says he;
 ``that's a comfort.'' And the carriage drove on, taking the road down
-Piccadilly, where Apsley House and St. George's Hospital wore red
+Piccadilly, where Apsley House and St.\ George's Hospital wore red
 jackets still; where there were oil-lamps; where Achilles was not yet
 born; nor the Pimlico arch raised; nor the hideous equestrian monster
 which pervades it and the neighbourhood; and so they drove down by
@@ -14743,7 +14762,7 @@ and have a bad complexion?  Mrs.\ Bute could think of nobody but the
 Curate to take one of them off her hands; and Jim coming in from the
 stable at this minute, through the parlour window, with a short pipe
 stuck in his oilskin cap, he and his father fell to talking about odds
-on the St. Leger, and the colloquy between the Rector and his wife
+on the St.\ Leger, and the colloquy between the Rector and his wife
 ended.
 
 Mrs.\ Bute did not augur much good to the cause from the sending of her
@@ -15357,7 +15376,7 @@ saw an elaborate monument upon the wall, where Britannia was
 represented weeping over an urn, and a broken sword and a couchant lion
 indicated that the piece of sculpture had been erected in honour of a
 deceased warrior.  The sculptors of those days had stocks of such
-funereal emblems in hand; as you may see still on the walls of St.
+funereal emblems in hand; as you may see still on the walls of St.\ %
 Paul's, which are covered with hundreds of these braggart heathen
 allegories.  There was a constant demand for them during the first
 fifteen years of the present century.
@@ -15742,7 +15761,7 @@ took a very smart and leading position in the society of that capital,
 and was welcomed at some of the most distinguished houses of the
 restored French nobility.  The English men of fashion in Paris courted
 her, too, to the disgust of the ladies their wives, who could not bear
-the parvenue.  For some months the salons of the Faubourg St.  Germain,
+the parvenue.  For some months the salons of the Faubourg St.\ Germain,
 in which her place was secured, and the splendours of the new Court,
 where she was received with much distinction, delighted and perhaps a
 little intoxicated Mrs.\ Crawley, who may have been disposed during this
@@ -16629,10 +16648,10 @@ Our worthy fat friend Joseph Sedley returned to India not long after
 his escape from Brussels.  Either his furlough was up, or he dreaded to
 meet any witnesses of his Waterloo flight.  However it might be, he
 went back to his duties in Bengal very soon after Napoleon had taken up
-his residence at St.  Helena, where Jos saw the ex-Emperor. To hear Mr.\ %
+his residence at St.\ Helena, where Jos saw the ex-Emperor. To hear Mr.\ %
 Sedley talk on board ship you would have supposed that it was not the
 first time he and the Corsican had met, and that the civilian had
-bearded the French General at Mount St.  John.  He had a thousand
+bearded the French General at Mount St.\ John.  He had a thousand
 anecdotes about the famous battles; he knew the position of every
 regiment and the loss which each had incurred.  He did not deny that he
 had been concerned in those victories---that he had been with the army
@@ -17007,7 +17026,7 @@ the time, had no particular call for coals.  He knew, though, the hand
 which had written the prospectus.  Good God! what would he not have
 given to hold it in his own!  A second prospectus came out, informing
 the Major that J.  Sedley and Company, having established agencies at
-Oporto, Bordeaux, and St.  Mary's, were enabled to offer to their
+Oporto, Bordeaux, and St.\ Mary's, were enabled to offer to their
 friends and the public generally the finest and most celebrated growths
 of ports, sherries, and claret wines at reasonable prices and under
 extraordinary advantages. Acting upon this hint, Dobbin furiously
@@ -18466,7 +18485,7 @@ his house peopled by the ``nobs.'' So he forgave young Bullock and
 consented that the marriage should take place.
 
 It was a grand affair---the bridegroom's relatives giving the breakfast,
-their habitations being near St.  George's, Hanover Square, where the
+their habitations being near St.\ George's, Hanover Square, where the
 business took place.  The ``nobs of the West End'' were invited, and many
 of them signed the book.  Mr.\ Mango and Lady Mary Mango were there,
 with the dear young Gwendoline and Guinever Mango as bridesmaids;
@@ -20097,7 +20116,7 @@ the Major's gift.  It was a very fine and beautiful web, and the
 merchant made a very good bargain when he gave her twenty guineas for
 her shawl.
 
-She ran on amazed and flurried with her riches to Darton's shop, in St.
+She ran on amazed and flurried with her riches to Darton's shop, in St.\ %
 Paul's Churchyard, and there purchased the Parents' Assistant and the
 Sandford and Merton Georgy longed for, and got into the coach there
 with her parcel, and went home exulting.  And she pleased herself by
@@ -20342,7 +20361,7 @@ sons, Lord Steyne, who was a good scholar and amateur casuist, had no
 better sport in the evening after dinner in the country than in setting
 the boys' tutor, the Reverend Mr.\ Trail (now my Lord Bishop of Ealing)
 on her ladyship's director, Father Mole, over their wine, and in
-pitting Oxford against St. Acheul.  He cried ``Bravo, Latimer!  Well
+pitting Oxford against St.\ Acheul.  He cried ``Bravo, Latimer!  Well
 said, Loyola!'' alternately; he promised Mole a bishopric if he would
 come over, and vowed he would use all his influence to get Trail a
 cardinal's hat if he would secede.  Neither divine allowed himself to
@@ -20396,7 +20415,7 @@ Gaunt House.  Lord George gave up his post on the European continent,
 and was gazetted to Brazil.  But people knew better; he never returned
 from that Brazil expedition---never died there---never lived there---never
 was there at all.  He was nowhere; he was gone out altogether.
-``Brazil,'' said one gossip to another, with a grin---``Brazil is St.
+``Brazil,'' said one gossip to another, with a grin---``Brazil is St.\ %
 John's Wood.  Rio de Janeiro is a cottage surrounded by four walls, and
 George Gaunt is accredited to a keeper, who has invested him with the
 order of the Strait-Waistcoat.'' These are the kinds of epitaphs which
@@ -20561,7 +20580,7 @@ good-natured sister-in-law insisted that they should be a family party.
 The coach was large, the ladies not very big, they would hold their
 trains in their laps---finally, the four went fraternally together, and
 their carriage presently joined the line of royal equipages which was
-making its way down Piccadilly and St.  James's Street, towards the old
+making its way down Piccadilly and St.\ James's Street, towards the old
 brick palace where the Star of Brunswick was in waiting to receive his
 nobles and gentlefolks.
 
@@ -20590,7 +20609,7 @@ have become the character perfectly.
 We are authorized to state that Mrs.\ Rawdon Crawley's costume de cour
 on the occasion of her presentation to the Sovereign was of the most
 elegant and brilliant description.  Some ladies we may have seen---we
-who wear stars and cordons and attend the St.  James's assemblies, or
+who wear stars and cordons and attend the St.\ James's assemblies, or
 we, who, in muddy boots, dawdle up and down Pall Mall and peep into the
 coaches as they drive up with the great folks in their feathers---some
 ladies of fashion, I say, we may have seen, about two o'clock of the
@@ -20600,7 +20619,7 @@ their cream-coloured chargers---who are by no means lovely and enticing
 objects at that early period of noon.  A stout countess of sixty,
 decolletee, painted, wrinkled with rouge up to her drooping eyelids,
 and diamonds twinkling in her wig, is a wholesome and edifying, but not
-a pleasant sight.  She has the faded look of a St.  James's Street
+a pleasant sight.  She has the faded look of a St.\ James's Street
 illumination, as it may be seen of an early morning, when half the
 lamps are out, and the others are blinking wanly, as if they were about
 to vanish like ghosts before the dawn.  Such charms as those of which
@@ -20840,7 +20859,7 @@ give an old fellow no rest until you get there.  It's not half so nice
 as here. You'll be bored there.  I am.  My wife is as gay as Lady
 Macbeth, and my daughters as cheerful as Regan and Goneril.  I daren't
 sleep in what they call my bedroom. The bed is like the baldaquin of
-St.  Peter's, and the pictures frighten me.  I have a little brass bed
+St.\ Peter's, and the pictures frighten me.  I have a little brass bed
 in a dressing-room, and a little hair mattress like an anchorite. I am
 an anchorite. Ho!  ho!  You'll be asked to dinner next week.  And gare
 aux femmes, look out and hold your own!  How the women will bully you!''
@@ -20919,7 +20938,7 @@ Robinson's bank, presented a document there to the authority at the
 desk, who, in reply, asked her ``How she would take it?''
 
 She gently said ``she would take a hundred and fifty pounds in small
-notes and the remainder in one note'': and passing through St. Paul's
+notes and the remainder in one note'': and passing through St.\ Paul's
 Churchyard stopped there and bought the handsomest black silk gown for
 Briggs which money could buy; and which, with a kiss and the kindest
 speeches, she presented to the simple old spinster.
@@ -21133,7 +21152,7 @@ The times are such that one scarcely dares to allude to that kind of
 company which thousands of our young men in Vanity Fair are frequenting
 every day, which nightly fills casinos and dancing-rooms, which is
 known to exist as well as the Ring in Hyde Park or the Congregation at
-St.  James's---but which the most squeamish if not the most moral of
+St.\ James's---but which the most squeamish if not the most moral of
 societies is determined to ignore.  In a word, although Colonel Crawley
 was now five-and-forty years of age, it had not been his lot in life to
 meet with a half dozen good women, besides his paragon of a wife.  All
@@ -21732,7 +21751,7 @@ then the youthful Georgina Frederica, daughter of the Prince of Wales's
 favourite, the Earl of Portansherry, had once tried), this great and
 famous leader of the fashion chose to acknowledge Mrs.\ Rawdon Crawley;
 made her a most marked curtsey at the assembly over which she presided;
-and not only encouraged her son, St.  Kitts (his lordship got his place
+and not only encouraged her son, St.\ Kitts (his lordship got his place
 through Lord Steyne's interest), to frequent Mrs.\ Crawley's house, but
 asked her to her own mansion and spoke to her twice in the most public
 and condescending manner during dinner.  The important fact was known
@@ -23298,7 +23317,7 @@ by the Colonel's dishevelled appearance, and barred the way as if
 afraid that the other was going to force it.  But Colonel Crawley only
 took out a card and enjoined him particularly to send it in to Lord
 Steyne, and to mark the address written on it, and say that Colonel
-Crawley would be all day after one o'clock at the Regent Club in St.
+Crawley would be all day after one o'clock at the Regent Club in St.\ %
 James's Street---not at home.  The fat red-faced man looked after him
 with astonishment as he strode away; so did the people in their Sunday
 clothes who were out so early; the charity-boys with shining faces,
@@ -23797,7 +23816,7 @@ hint of the business which was occupying their minds.  Both, on the
 other hand, had joined pretty gaily in the conversation, for why should
 they interrupt it? Feasting, drinking, ribaldry, laughter, go on
 alongside of all sorts of other occupations in Vanity Fair---the crowds
-were pouring out of church as Rawdon and his friend passed down St.
+were pouring out of church as Rawdon and his friend passed down St.\ %
 James's Street and entered into their Club.
 
 The old bucks and habitues, who ordinarily stand gaping and grinning
@@ -24316,7 +24335,7 @@ time out of mind, and we have hundreds of thousands of apologists and
 admirers of injustice, misery, and brutality, as perpetrated among
 children.  Flushed with praise and victory over Master Toffy, George
 wished naturally to pursue his conquests further, and one day as he was
-strutting about in prodigiously dandified new clothes, near St.
+strutting about in prodigiously dandified new clothes, near St.\ %
 Pancras, and a young baker's boy made sarcastic comments upon his
 appearance, the youthful patrician pulled off his dandy jacket with
 great spirit, and giving it in charge to the friend who accompanied him
@@ -24786,7 +24805,7 @@ celerity that he arrived at Madras in a high fever.  His servants who
 accompanied him brought him to the house of the friend with whom he had
 resolved to stay until his departure for Europe in a state of delirium;
 and it was thought for many, many days that he would never travel
-farther than the burying-ground of the church of St.  George's, where
+farther than the burying-ground of the church of St.\ George's, where
 the troops should fire a salvo over his grave, and where many a gallant
 officer lies far away from his home.
 
@@ -24801,7 +24820,7 @@ testament.  He desired to be buried with a little brown hair-chain
 which he wore round his neck and which, if the truth must be known, he
 had got from Amelia's maid at Brussels, when the young widow's hair was
 cut off, during the fever which prostrated her after the death of
-George Osborne on the plateau at Mount St.  John.
+George Osborne on the plateau at Mount St.\ John.
 
 He recovered, rallied, relapsed again, having undergone such a process
 of blood-letting and calomel as showed the strength of his original
@@ -24865,7 +24884,7 @@ officers of the ship, Major Dobbin not being by, he described the whole
 battle of Waterloo and all but announced that Napoleon never would have
 gone to Saint Helena at all but for him, Jos Sedley.
 
-After leaving St.  Helena he became very generous, disposing of a great
+After leaving St.\ Helena he became very generous, disposing of a great
 quantity of ship stores, claret, preserved meats, and great casks
 packed with soda-water, brought out for his private delectation.  There
 were no ladies on board; the Major gave the pas of precedency to the
@@ -24937,7 +24956,7 @@ indeed; for, from that day, the very day that he changed the draught,
 Major Dobbin began to mend. And thus it was that deserving officer,
 Captain Kirk, was disappointed of his majority.
 
-After they passed St.  Helena, Major Dobbin's gaiety and strength was
+After they passed St.\ Helena, Major Dobbin's gaiety and strength was
 such as to astonish all his fellow passengers.  He larked with the
 midshipmen, played single-stick with the mates, ran up the shrouds like
 a boy, sang a comic song one night to the amusement of the whole party
@@ -25669,7 +25688,7 @@ the very hour at which Major Dobbin was seated at the table of his
 father, Sir William, where his sister found out (for it was impossible
 for the Major to tell fibs) that he had been to see Mrs.\ George Osborne.
 
-Jos was so comfortably situated in St.  Martin's Lane, he could enjoy
+Jos was so comfortably situated in St.\ Martin's Lane, he could enjoy
 his hookah there with such perfect ease, and could swagger down to the
 theatres, when minded, so agreeably, that, perhaps, he would have
 remained altogether at the Slaughters' had not his friend, the Major,
@@ -25679,7 +25698,7 @@ father.  Jos was a soft fellow in anybody's hands, Dobbin most active
 in anybody's concerns but his own; the civilian was, therefore, an easy
 victim to the guileless arts of this good-natured diplomatist and was
 ready to do, to purchase, hire, or relinquish whatever his friend
-thought fit.  Loll Jewab, of whom the boys about St.  Martin's Lane
+thought fit.  Loll Jewab, of whom the boys about St.\ Martin's Lane
 used to make cruel fun whenever he showed his dusky countenance in the
 street, was sent back to Calcutta in the Lady Kicklebury East Indiaman,
 in which Sir William Dobbin had a share, having previously taught Jos's
@@ -26095,7 +26114,7 @@ such a tremendous Tory and pillar of the State that he was for having
 Amelia to go to a Drawing-room, too.  He somehow had worked himself up
 to believe that he was implicated in the maintenance of the public
 welfare and that the Sovereign would not be happy unless Jos Sedley and
-his family appeared to rally round him at St.  James's.
+his family appeared to rally round him at St.\ James's.
 
 Emmy laughed.  ``Shall I wear the family diamonds, Jos?'' she said.
 
@@ -27041,7 +27060,7 @@ we saw the society take its departure. The Duchess Dowager went off in
 her jingling old coach, attended by two faithful and withered old maids
 of honour, and a little snuffy spindle-shanked gentleman in waiting, in
 a brown jasey and a green coat covered with orders---of which the star
-and the grand yellow cordon of the order of St. Michael of Pumpernickel
+and the grand yellow cordon of the order of St.\ Michael of Pumpernickel
 were most conspicuous.  The drums rolled, the guards saluted, and the
 old carriage drove away.
 
@@ -27391,7 +27410,7 @@ residence, by the Count de Schlusselback.  Snuff-boxes were given away
 in profusion (as we learned from the Court jeweller, who sold and
 afterwards bought them again), and bushels of the Order of Saint
 Michael of Pumpernickel were sent to the nobles of the Court, while
-hampers of the cordons and decorations of the Wheel of St. Catherine of
+hampers of the cordons and decorations of the Wheel of St.\ Catherine of
 Schlippenschloppen were brought to ours.  The French envoy got both.
 ``He is covered with ribbons like a prize cart-horse,'' Tapeworm said,
 who was not allowed by the rules of his service to take any
@@ -28004,7 +28023,7 @@ question was no other than Mrs.\ Rawdon Crawley.
 She was, in fact, no better than a vagabond upon this earth.  When she
 got her money she gambled; when she had gambled it she was put to
 shifts to live; who knows how or by what means she succeeded? It is
-said that she was once seen at St.  Petersburg, but was summarily
+said that she was once seen at St.\ Petersburg, but was summarily
 dismissed from that capital by the police, so that there cannot be any
 possibility of truth in the report that she was a Russian spy at
 Toplitz and Vienna afterwards.  I have even been informed that at Paris
@@ -29950,15 +29969,20 @@ Ah!  \foreign{Vanitas Vanitatum!}  which of us is happy in this world? Which of
 us has his desire? or, having it, is satisfied?---come, children, let us
 shut up the box and the puppets, for our play is played out.
 
-\cleardoublepage
-~
 
+\cleardoublepage
+~\markboth{}{}
+
+\cleardoublepage
 \appendix
-\chapter{A note about this book}
+\renewcommand{\thechapter}{\Alph{chapter}.}
+\addtocontents{toc}{\vspace{\normalbaselineskip}}
+\chapter{A note about this book}\label{about}
 
 HOGG:  How did I make this?
 
-HOGG:  What decisions did I make (about dashes, emphasis, money, foreign words, italics, etc.)?
+HOGG: What decisions did I make (about quotations, dashes, emphasis,
+money, foreign words, italics, etc.)?
 
 HOGG:  Thank \LaTeX.
 
@@ -29966,7 +29990,7 @@ I would like to thank Project Gutengerg (HOGG: say more).
 
 I appreciated comparing with my Modern Library Classics edition (HOGG: give full citation).
 
-HOGG: I got ideas from \textit{The Elements of Typographic Style}.
+HOGG: I got ideas from \textit{The Elements of Typographic Style} by Bringhurst (?).
 
 \chapter{Information from Project Gutenberg}
 \input{gutenberg}
