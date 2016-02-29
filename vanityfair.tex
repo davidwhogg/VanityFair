@@ -7,56 +7,69 @@
 % to-do list:
 % -----------
 % - typeset titlepage and other front matter.
-% - fix quotation marks, and other symbol issues.
 % - fix all occurences of all-caps.
 % - set spacing and fonts and etc.
+% - check and deal with all-caps words and phrases
 % - find quoted letters and notes and set them properly with margins.
 % - almost all italics from my edition have been eradicated here... fix these?
 % - almost all foreign punctuation from my edition has been eradicated here... fix these!
 % - decide how to typeset money amounts -- there are inconsistencies now.
 % - fix pagination so the title page is actually and really page 1 and the 135th page of the PDF file is page 135...
-% - decide what to do about headers and footers.
 % - find all HOGG in text and fix.
 
-\documentclass[12pt]{book}
-\usepackage{textgreek}
+\documentclass[9pt, a5paper]{book}
+\usepackage{fancyhdr, textgreek}
+\usepackage[a5paper]{geometry}
 
 % spacings
-\linespread{1.08333} % 10/13 spacing
-\setlength{\parindent}{1.0833\baselineskip}
+\geometry{hmargin={2cm, 2cm}}
+\geometry{vmargin={2.5cm, 2.5cm}}
+\linespread{1.08333} % 10/13 line spacing
+\setlength{\parindent}{1.0833\baselineskip} % make the indents like square blocks
+
+% header hacking
+\renewcommand{\MakeUppercase}[1]{{#1}}
+\pagestyle{fancy}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\chaptermark}[1]{\markboth{~}{\thechapter.~#1}}
+\fancyhead[LE]{{\footnotesize{\textit{Vanity Fair} \ by William Makepeace Thackeray}}}
+\fancyhead[RE]{}
+\fancyhead[LO]{}
+\fancyhead[RO]{{\footnotesize\rightmark}}
 
 % word typesetting
 \newcommand{\foreign}[1]{\textsl{#1}}
-\renewcommand{\MakeUppercase}[1]{{#1}}
-\renewcommand\thechapter{\Roman{chapter}}
 
-\begin{document}
+\begin{document}\sloppy\sloppypar\markboth{William Makepeace Thackeray \ \textit{Vanity Fair}}{}
 
-\begin{titlepage}
-\chapter*{Vanity Fair}
+\chapter*{Vanity Fair}\thispagestyle{empty}
 \section*{A Novel Without a Hero}
 ~
 \subsection*{by William Makepeace Thackeray}
 ~
-\end{titlepage}
 
 \clearpage
-\begin{centering}
+\begin{centering}\thispagestyle{plain}
+~
+\vfill
 
 All content is in the Public Domain.
 
-This book has no ISBN.
+\vfill
 
-I don't even know when it was written!
+This book has no ISBN. \\
+It is a one-off original made by hand by David W. Hogg.
 
+\vfill
+~
 \end{centering}
 
-\clearpage
-\tableofcontents
+%% HOGG: If you want a table of contents, you are going to have to work for it
+%% \clearpage
+%% \tableofcontents
 
-\mainmatter
 \chapter*{Before the Curtain}
-\markboth{Before the Curtain}{\rightmark}
+\markboth{~}{Before the Curtain}
 \addcontentsline{toc}{chapter}{Before the Curtain}
 
 As the manager of the Performance sits before the curtain on the boards
@@ -29917,8 +29930,6 @@ us has his desire? or, having it, is satisfied?---come, children, let us
 shut up the box and the puppets, for our play is played out.
 
 
-
-
 \appendix
 \chapter{A note about this book}
 
@@ -29929,6 +29940,8 @@ HOGG:  What decisions did I make (about dashes, emphasis, money, foreign words, 
 I would like to thank Project Gutengerg (HOGG: say more).
 
 I appreciated comparing with my Modern Library Classics edition (HOGG: give full citation).
+
+HOGG: I got ideas from \textit{The Elements of Typographic Style}.
 
 \chapter{Information from Project Gutenberg}
 \input{gutenberg}
