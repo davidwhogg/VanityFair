@@ -28,8 +28,23 @@
 % spacings
 \geometry{hmargin={2cm, 2cm}}
 \geometry{vmargin={2.5cm, 2.5cm}}
-\linespread{1.08333} % 10/13 line spacing
-\setlength{\parindent}{1.0833\baselineskip} % make the indents like square blocks
+\newlength{\hoggskip}
+\setlength{\hoggskip}{1.0833\baselineskip}
+\linespread{1.0833} % 10/13 line spacing
+\setlength{\parindent}{\hoggskip} % make the indents like square blocks
+
+\makeatletter
+\renewenvironment{quotation} % idea from http://tex.stackexchange.com/questions/29640/how-to-modify-spacing-around-quotation-environment
+               {\list{}{\listparindent=\hoggskip
+                        \itemindent=\listparindent
+                        \leftmargin=1.5\hoggskip
+                        \rightmargin=0.5\hoggskip
+                        \topsep=0pt
+                        \parsep        \z@ \@plus\p@}%
+                \item\relax}
+               {\endlist}
+\makeatother
+\newcommand{\longindent}{\noindent\rule{0.4\textwidth}{0pt}}
 
 % header hacking
 \renewcommand{\MakeUppercase}[1]{{#1}}
@@ -54,7 +69,9 @@
 % word typesetting
 \newcommand{\foreign}[1]{\textsl{#1}}
 
-\begin{document}\sloppy\sloppypar\markboth{William Makepeace Thackeray \ \textit{Vanity Fair}}{}
+\begin{document}%
+\sloppy\sloppypar\raggedbottom%
+\markboth{William Makepeace Thackeray \ \textit{Vanity Fair}}{}
 
 \begin{centering}\thispagestyle{empty}
 ~
@@ -168,7 +185,7 @@ and the curtain rises.
 
 \smallskip
 \noindent
-\textsc{London} \hfill June 28, 1848
+\textsc{London} \hfill \textsl{June 28, 1848}
 
 %% HOGG: Use the following to check that the Chapters are complete and
 %% numbered correctly in the LaTeX output.
@@ -290,23 +307,25 @@ letter from a sovereign.  Only when her pupils quitted the
 establishment, or when they were about to be married, and once, when
 poor Miss Birch died of the scarlet fever, was Miss Pinkerton known to
 write personally to the parents of her pupils; and it was Jemima's
-opinion that if anything could console Mrs.\ Birch for her daughter's
+opinion that if anything \emph{could} console Mrs.\ Birch for her daughter's
 loss, it would be that pious and eloquent composition in which Miss
 Pinkerton announced the event.
 
 In the present instance Miss Pinkerton's ``billet'' was to the following
 effect:---
+\begin{quotation}
+\longindent The Mall, Chiswick, June 15, 18---
 
-The Mall, Chiswick, June 15, 18
+\noindent Madam,
 
-MADAM,---After her six years' residence at the Mall, I have the honour
+After her six years' residence at the Mall, I have the honour
 and happiness of presenting Miss Amelia Sedley to her parents, as a
 young lady not unworthy to occupy a fitting position in their polished
 and refined circle.  Those virtues which characterize the young English
 gentlewoman, those accomplishments which become her birth and station,
-will not be found wanting in the amiable Miss Sedley, whose INDUSTRY
-and OBEDIENCE have endeared her to her instructors, and whose
-delightful sweetness of temper has charmed her AGED and her YOUTHFUL
+will not be found wanting in the amiable Miss Sedley, whose \emph{industry}
+and \emph{obedience} have endeared her to her instructors, and whose
+delightful sweetness of temper has charmed her \emph{aged} and her \emph{youthful}
 companions.
 
 In music, in dancing, in orthography, in every variety of embroidery
@@ -314,23 +333,27 @@ and needlework, she will be found to have realized her friends' fondest
 wishes.  In geography there is still much to be desired; and a careful
 and undeviating use of the backboard, for four hours daily during the
 next three years, is recommended as necessary to the acquirement of
-that dignified DEPORTMENT AND CARRIAGE, so requisite for every young
-lady of FASHION.
+that dignified \emph{deportment and carriage}, so requisite for every young
+lady of \emph{fashion}.
 
 In the principles of religion and morality, Miss Sedley will be found
 worthy of an establishment which has been honoured by the presence of
-THE GREAT LEXICOGRAPHER, and the patronage of the admirable Mrs.\ %
+\emph{The Great Lexicographer}, and the patronage of the admirable Mrs.\ %
 Chapone.  In leaving the Mall, Miss Amelia carries with her the hearts
 of her companions, and the affectionate regards of her mistress, who
 has the honour to subscribe herself,
 
-Madam, Your most obliged humble servant, BARBARA PINKERTON
+\longindent Madam,
 
-P.S.---Miss Sharp accompanies Miss Sedley.  It is particularly requested
+\longindent Your most obliged humble servant,
+
+\longindent Barbara Pinkerton
+
+P. S.---Miss Sharp accompanies Miss Sedley.  It is particularly requested
 that Miss Sharp's stay in Russell Square may not exceed ten days.  The
 family of distinction with whom she is engaged, desire to avail
 themselves of her services as soon as possible.
-
+\end{quotation}
 
 This letter completed, Miss Pinkerton proceeded to write her own name,
 and Miss Sedley's, in the fly-leaf of a Johnson's Dictionary---the
@@ -374,8 +397,8 @@ parting the high honour of the Dixonary.
 Although schoolmistresses' letters are to be trusted no more nor less
 than churchyard epitaphs; yet, as it sometimes happens that a person
 departs this life who is really deserving of all the praises the stone
-cutter carves over his bones; who IS a good Christian, a good parent,
-child, wife, or husband; who actually DOES leave a disconsolate family
+cutter carves over his bones; who \emph{is} a good Christian, a good parent,
+child, wife, or husband; who actually \emph{does} leave a disconsolate family
 to mourn his loss; so in academies of the male and female sex it occurs
 every now and then that the pupil is fully worthy of the praises
 bestowed by the disinterested instructor. Now, Miss Amelia Sedley was a
@@ -446,12 +469,12 @@ woolly-headed, but generous and affectionate Miss Swartz; and the
 orphan little Laura Martin (who was just in round-hand), took her
 friend's hand and said, looking up in her face wistfully, ``Amelia, when
 I write to you I shall call you Mamma.'' All which details, I have no
-doubt, JONES, who reads this book at his Club, will pronounce to be
+doubt, \textsc{Jones}, who reads this book at his Club, will pronounce to be
 excessively foolish, trivial, twaddling, and ultra-sentimental.  Yes; I
 can see Jones at this minute (rather flushed with his joint of mutton
 and half pint of wine), taking out his pencil and scoring under the
 words ``foolish, twaddling,'' \&c., and adding to them his own remark of
-``QUITE TRUE.'' Well, he is a lofty man of genius, and admires the great
+``\emph{quite true}.'' Well, he is a lofty man of genius, and admires the great
 and heroic in life and novels; and so had better take warning and go
 elsewhere.
 
@@ -479,8 +502,8 @@ coming downstairs with her own bandbox.
 ``I suppose I must,'' said Miss Sharp calmly, and much to the wonder of
 Miss Jemima; and the latter having knocked at the door, and receiving
 permission to come in, Miss Sharp advanced in a very unconcerned
-manner, and said in French, and with a perfect accent, ``Mademoiselle,
-je viens vous faire mes adieux.''
+manner, and said in French, and with a perfect accent, ``\foreign{Mademoiselle,
+je viens vous faire mes adieux.}'' % HOGG: period inside or outside the \foreign??
 
 Miss Pinkerton did not understand French; she only directed those who
 did: but biting her lips and throwing up her venerable and Roman-nosed
@@ -503,11 +526,11 @@ Then came the struggle and parting below.  Words refuse to tell it. All
 the servants were there in the hall---all the dear friends---all the young
 ladies---the dancing-master who had just arrived; and there was such a
 scuffling, and hugging, and kissing, and crying, with the hysterical
-YOOPS of Miss Swartz, the parlour-boarder, from her room, as no pen can
+\emph{yoops} of Miss Swartz, the parlour-boarder, from her room, as no pen can % HOGG ``yoops''?
 depict, and as the tender heart would fain pass over. The embracing was
 over; they parted---that is, Miss Sedley parted from her friends.  Miss
 Sharp had demurely entered the carriage some minutes before.  Nobody
-cried for leaving HER.
+cried for leaving \emph{her}.
 
 Sambo of the bandy legs slammed the carriage door on his young weeping
 mistress.  He sprang up behind the carriage.  ``Stop!'' cried Miss
@@ -520,7 +543,7 @@ without that.  Good-by.  Drive on, coachman.  God bless you!''
 
 And the kind creature retreated into the garden, overcome with emotion.
 
-But, lo! and just as the coach drove off, Miss Sharp put her pale face
+But, lo!\ and just as the coach drove off, Miss Sharp put her pale face % HOGG: note spacing after lo!
 out of the window and actually flung the book back into the garden.
 
 This almost caused Jemima to faint with terror.  ``Well, I never''---said
@@ -24653,7 +24676,7 @@ lad to him.
 
 
 
-\chapter{Eothen} % HOGG: Should this be typeset \foreign?
+\chapter{Eothen} % HOGG: Should this be typeset \foreign? What does this mean?
 
 It was one of the many causes for personal pride with which old Osborne
 chose to recreate himself that Sedley, his ancient rival, enemy, and
