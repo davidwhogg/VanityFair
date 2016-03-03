@@ -47,12 +47,12 @@
 \renewenvironment{quotation} % idea from http://tex.stackexchange.com/questions/29640/how-to-modify-spacing-around-quotation-environment
                {\list{}{\listparindent=\hoggskip
                         \itemindent=\listparindent
-                        \leftmargin=1.5\hoggskip
-                        \rightmargin=0.5\hoggskip
+                        \leftmargin=2.0\hoggskip
+                        \rightmargin=1.0\hoggskip
                         \topsep=0pt
                         \parsep        \z@ \@plus\p@}%
                 \item\relax}
-               {\endlist}
+               {\endlist~}
 \makeatother
 % for headers on letters and signatures:
 \newcommand{\longindent}{\noindent\rule{0.4\textwidth}{0pt}}
@@ -363,6 +363,7 @@ has the honour to subscribe herself,
 
 \longindent Barbara Pinkerton
 
+\noindent
 P. S.---Miss Sharp accompanies Miss Sedley.  It is particularly requested
 that Miss Sharp's stay in Russell Square may not exceed ten days.  The
 family of distinction with whom she is engaged, desire to avail
@@ -1683,18 +1684,49 @@ to listen on the landing-place.
 Among these ditties was one, the last of the concert, and to the
 following effect:
 
-% HOGG: format poem correctly!!
+\begin{quotation}
+\noindent
+Ah!\ bleak and barren was the moor
 
-Ah! bleak and barren was the moor, Ah! loud and piercing was the storm,
-The cottage roof was shelter'd sure, The cottage hearth was bright and
-warm---An orphan boy the lattice pass'd, And, as he mark'd its cheerful
-glow, Felt doubly keen the midnight blast, And doubly cold the fallen
-snow.
+Ah!\ loud and piercing was the storm,
 
-They mark'd him as he onward prest, With fainting heart and weary limb;
-Kind voices bade him turn and rest, And gentle faces welcomed him. The
-dawn is up---the guest is gone, The cottage hearth is blazing still;
-Heaven pity all poor wanderers lone! Hark to the wind upon the hill!
+\noindent
+The cottage roof was shelter'd sure,
+
+The cottage hearth was bright and warm--- % HOGG: Check punctuation
+
+\noindent
+An orphan boy the lattice pass'd,
+
+And, as he mark'd its cheerful glow,
+
+\noindent
+Felt doubly keen the midnight blast,
+
+And doubly cold the fallen snow.
+
+~
+
+\noindent
+They mark'd him as he onward prest,
+
+With fainting heart and weary limb;
+
+\noindent
+Kind voices bade him turn and rest,
+
+And gentle faces welcomed him.
+
+\noindent
+The dawn is up---the guest is gone,
+
+The cottage hearth is blazing still;
+
+\noindent
+Heaven pity all poor wanderers lone!
+
+Hark to the wind upon the hill!
+\end{quotation}
 
 It was the sentiment of the before-mentioned words, ``When I'm gone,''
 over again.  As she came to the last words, Miss Sharp's ``deep-toned
