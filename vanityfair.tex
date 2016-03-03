@@ -6,7 +6,7 @@
 
 % to-do list:
 % -----------
-% - next Chapter to carefully compare: III
+% - next Chapter to carefully compare: I'm in mid-IV
 % - spacing after quotations, as in ``blah blah!'' said Jos --- this puts too much space before ``said'' needs \ .
 % - find quoted correspondence and notes and set them properly with margins.
 % - almost all italics from my edition have been eradicated here... fix these?
@@ -14,6 +14,13 @@
 % - develop a policy about what foreign words get \foreign{} -- eg, place names?
 % - decide how to typeset money amounts -- there are inconsistencies now.
 % - find all HOGG in text and fix / consider
+
+% style notes:
+% ------------
+% - missing letters, as in ``D---------'': use 9 ``-'' characters
+% - \emph for emphasis, \textit for book titles, \foreign for french and latin
+% - (need a policy about punctuation at the end of emph, textit, and foreign)
+% - use quotation environment and \thematicbreak command (below)
 
 \documentclass[10pt, a5paper]{book}
 \usepackage{fancyhdr, textgreek}
@@ -948,7 +955,7 @@ bounced off his arm-chair, and blushed excessively, and hid his entire
 face almost in his neckcloths at this apparition.
 
 ``It's only your sister, Joseph,'' said Amelia, laughing and shaking the
-two fingers which he held out.  ``I've come home FOR GOOD, you know; and
+two fingers which he held out.  ``I've come home \emph{for good,} you know; and
 this is my friend, Miss Sharp, whom you have heard me mention.''
 
 ``No, never, upon my word,'' said the head under the neckcloth, shaking
@@ -978,16 +985,16 @@ would allow him.  ``I can't make you such handsome presents, Joseph,''
 continued his sister, ``but while I was at school, I have embroidered
 for you a very beautiful pair of braces.''
 
-``Good Gad! Amelia,'' cried the brother, in serious alarm, ``what do you
+``Good Gad!\ Amelia,'' cried the brother, in serious alarm, ``what do you
 mean?''\ and plunging with all his might at the bell-rope, that article
 of furniture came away in his hand, and increased the honest fellow's
-confusion.  ``For heaven's sake see if my buggy's at the door.  I CAN'T
+confusion.  ``For heaven's sake see if my buggy's at the door.  I \emph{can't}
 wait.  I must go.  D--------- that groom of mine. I must go.''
 
 At this minute the father of the family walked in, rattling his seals
 like a true British merchant.  ``What's the matter, Emmy?'' says he.
 
-``Joseph wants me to see if his---his buggy is at the door.  What is a
+``Joseph wants me to see if his---his \emph{buggy} is at the door.  What is a
 buggy, Papa?''
 
 ``It is a one-horse palanquin,'' said the old gentleman, who was a wag in
@@ -1004,7 +1011,7 @@ wants to be off?''
 ``I promised Bonamy of our service, sir,'' said Joseph, ``to dine with
 him.''
 
-``O fie! didn't you tell your mother you would dine here?''
+``O fie!\ didn't you tell your mother you would dine here?''
 
 ``But in this dress it's impossible.''
 
@@ -1016,7 +1023,7 @@ off in a fit of laughter, highly agreeable to the old gentleman.
 ``Did you ever see a pair of buckskins like those at Miss Pinkerton's?''\ %
 continued he, following up his advantage.
 
-``Gracious heavens! Father,'' cried Joseph.
+``Gracious heavens!\ Father,'' cried Joseph.
 
 ``There now, I have hurt his feelings.  Mrs.\ Sedley, my dear, I have
 hurt your son's feelings.  I have alluded to his buckskins.  Ask Miss
@@ -1030,6 +1037,7 @@ home the best turbot in Billingsgate.''
 with these two young women,'' said the father, and he took an arm of
 wife and daughter and walked merrily off.
 
+\thematicbreak
 If Miss Rebecca Sharp had determined in her heart upon making the
 conquest of this big beau, I don't think, ladies, we have any right to
 blame her; for though the task of husband-hunting is generally, and
@@ -1037,7 +1045,7 @@ with becoming modesty, entrusted by young persons to their mammas,
 recollect that Miss Sharp had no kind parent to arrange these delicate
 matters for her, and that if she did not get a husband for herself,
 there was no one else in the wide world who would take the trouble off
-her hands.  What causes young people to ``come out,'' but the noble
+her hands.  What causes young people to ``come \emph{out,}'' but the noble
 ambition of matrimony? What sends them trooping to watering-places?
 What keeps them dancing till five o'clock in the morning through a
 whole mortal season? What causes them to labour at pianoforte sonatas,
@@ -1054,15 +1062,15 @@ Sedley has, in the depths of her kind heart, already arranged a score
 of little schemes for the settlement of her Amelia, so also had our
 beloved but unprotected Rebecca determined to do her very best to
 secure the husband, who was even more necessary for her than for her
-friend. She had a vivid imagination; she had, besides, read the Arabian
-Nights and Guthrie's Geography; and it is a fact that while she was
+friend. She had a vivid imagination; she had, besides, read the \textit{Arabian
+Nights} and \textit{Guthrie's Geography}; and it is a fact that while she was
 dressing for dinner, and after she had asked Amelia whether her brother
 was very rich, she had built for herself a most magnificent castle in
 the air, of which she was mistress, with a husband somewhere in the
 background (she had not seen him as yet, and his figure would not
 therefore be very distinct); she had arrayed herself in an infinity of
 shawls, turbans, and diamond necklaces, and had mounted upon an
-elephant to the sound of the march in Bluebeard, in order to pay a
+elephant to the sound of the march in \textit{Bluebeard}, in order to pay a
 visit of ceremony to the Grand Mogul. Charming Alnaschar visions! it is
 the happy privilege of youth to construct you, and many a fanciful
 young creature besides Rebecca Sharp has indulged in these delightful
@@ -1103,11 +1111,11 @@ understand that he and Brummel were the leading bucks of the day.  But
 he was as lonely here as in his jungle at Boggley Wollah.  He scarcely
 knew a single soul in the metropolis: and were it not for his doctor,
 and the society of his blue-pill, and his liver complaint, he must have
-died of loneliness. He was lazy, peevish, and a bon-vivant; the
+died of loneliness. He was lazy, peevish, and a \foreign{bon-vivant}; the
 appearance of a lady frightened him beyond measure; hence it was but
 seldom that he joined the paternal circle in Russell Square, where
 there was plenty of gaiety, and where the jokes of his good-natured old
-father frightened his amour-propre.  His bulk caused Joseph much
+father frightened his \foreign{amour-propre}.  His bulk caused Joseph much
 anxious thought and alarm; now and then he would make a desperate
 attempt to get rid of his superabundant fat; but his indolence and love
 of good living speedily got the better of these endeavours at reform,
@@ -1117,14 +1125,14 @@ passed many hours daily in that occupation. His valet made a fortune
 out of his wardrobe: his toilet-table was covered with as many pomatums
 and essences as ever were employed by an old beauty: he had tried, in
 order to give himself a waist, every girth, stay, and waistband then
-invented.  Like most fat men, he would have his clothes made too tight,
+invented.  Like most fat men, he \emph{would} have his clothes made too tight,
 and took care they should be of the most brilliant colours and youthful
 cut.  When dressed at length, in the afternoon, he would issue forth to
 take a drive with nobody in the Park; and then would come back in order
 to dress again and go and dine with nobody at the Piazza Coffee-House.
 He was as vain as a girl; and perhaps his extreme shyness was one of
 the results of his extreme vanity. If Miss Rebecca can get the better
-of him, and at her first entrance into life, she is a young person of
+of \emph{him,} and at her first entrance into life, she is a young person of
 no ordinary cleverness.
 
 The first move showed considerable skill.  When she called Sedley a
@@ -1133,7 +1141,7 @@ would probably tell Joseph, or who, at any rate, would be pleased by
 the compliment paid to her son.  All mothers are.  If you had told
 Sycorax that her son Caliban was as handsome as Apollo, she would have
 been pleased, witch as she was.  Perhaps, too, Joseph Sedley would
-overhear the compliment---Rebecca spoke loud enough---and he did hear,
+overhear the compliment---Rebecca spoke loud enough---and he \emph{did} hear,
 and (thinking in his heart that he was a very fine man) the praise
 thrilled through every fibre of his big body, and made it tingle with
 pleasure.  Then, however, came a recoil.  ``Is the girl making fun of
@@ -1195,7 +1203,7 @@ too much.  She would have liked to choke old Sedley, but she swallowed
 her mortification as well as she had the abominable curry before it,
 and as soon as she could speak, said, with a comical, good-humoured
 air, ``I ought to have remembered the pepper which the Princess of
-Persia puts in the cream-tarts in the Arabian Nights.  Do you put
+Persia puts in the cream-tarts in the \textit{Arabian Nights.}  Do you put
 cayenne into your cream-tarts in India, sir?''
 
 Old Sedley began to laugh, and thought Rebecca was a good-humoured
@@ -1203,7 +1211,7 @@ girl.  Joseph simply said, ``Cream-tarts, Miss? Our cream is very bad in
 Bengal.  We generally use goats' milk; and, 'gad, do you know, I've got
 to prefer it!''
 
-``You won't like EVERYTHING from India now, Miss Sharp,'' said the old
+``You won't like \emph{everything} from India now, Miss Sharp,'' said the old
 gentleman; but when the ladies had retired after dinner, the wily old
 fellow said to his son, ``Have a care, Joe; that girl is setting her cap
 at you.''
@@ -1237,8 +1245,8 @@ dinner!  She dropped it twice.  Who's that singing in the drawing-room?
 
 But his modesty came rushing upon him with uncontrollable force. His
 father was asleep: his hat was in the hall: there was a hackney-coach
-standing hard by in Southampton Row.  ``I'll go and see the Forty
-Thieves,'' said he, ``and Miss Decamp's dance''; and he slipped away
+standing hard by in Southampton Row.  ``I'll go and see the \textit{Forty
+Thieves,}'' said he, ``and Miss Decamp's dance''; and he slipped away
 gently on the pointed toes of his boots, and disappeared, without
 waking his worthy parent.
 
@@ -1246,8 +1254,7 @@ waking his worthy parent.
 of the drawing-room, while Rebecca was singing at the piano.
 
 ``Miss Sharp has frightened him away,'' said Mrs.\ Sedley.  ``Poor Joe, why
-WILL he be so shy?''
-
+\emph{will} he be so shy?''
 
 
 \chapter{The Green Silk Purse}
@@ -1260,7 +1267,7 @@ whither the good-natured lady took her.  One day, Amelia had a
 headache, and could not go upon some party of pleasure to which the two
 young people were invited: nothing could induce her friend to go
 without her. ``What! you who have shown the poor orphan what happiness
-and love are for the first time in her life---quit YOU?  Never!''\ and
+and love are for the first time in her life---quit \emph{you}?  Never!''\ and
 the green eyes looked up to Heaven and filled with tears; and Mrs.\ %
 Sedley could not but own that her daughter's friend had a charming kind
 heart of her own.
@@ -1287,7 +1294,7 @@ rather affected too.  ``You know, her father was our drawing-master,
 Mamma, at Chiswick, and used to do all the best parts of our drawings.''
 
 ``My love! I'm sure I always heard Miss Pinkerton say that he did not
-touch them---he only mounted them.'' ``It was called mounting, Mamma.
+touch them---he only \emph{mounted} them.'' ``It was called mounting, Mamma.
 Rebecca remembers the drawing, and her father working at it, and the
 thought of it came upon her rather suddenly---and so, you know, she---''
 
@@ -1321,7 +1328,7 @@ good to me as dear Amelia.''
 ``I defy anybody not to be good to you, my dear,'' said her mother.
 
 ``The curry was capital; indeed it was,'' said Joe, quite gravely.
-``Perhaps there was NOT enough citron juice in it---no, there was NOT.''
+``Perhaps there was \emph{not} enough citron juice in it---no, there was \emph{not}.''
 
 ``And the chilis?''
 
@@ -1329,13 +1336,13 @@ good to me as dear Amelia.''
 of the circumstance, and exploding in a fit of laughter which ended
 quite suddenly, as usual.
 
-``I shall take care how I let YOU choose for me another time,'' said
+``I shall take care how I let \emph{you} choose for me another time,'' said
 Rebecca, as they went down again to dinner.  ``I didn't think men were
 fond of putting poor harmless girls to pain.''
 
 ``By Gad, Miss Rebecca, I wouldn't hurt you for the world.''
 
-``No,'' said she, ``I KNOW you wouldn't''; and then she gave him ever so
+``No,'' said she, ``I \emph{know} you wouldn't''; and then she gave him ever so
 gentle a pressure with her little hand, and drew it back quite
 frightened, and looked first for one instant in his face, and then down
 at the carpet-rods; and I am not prepared to say that Joe's heart did
@@ -1352,7 +1359,7 @@ it is that these women do not exercise their powers oftener! We can't
 resist them, if they do.  Let them show ever so little inclination, and
 men go down on their knees at once: old or ugly, it is all the same.
 And this I set down as a positive truth. A woman with fair
-opportunities, and without an absolute hump, may marry WHOM SHE LIKES.
+opportunities, and without an absolute hump, may marry \textsc{whom she likes}.
 Only let us be thankful that the darlings are like the beasts of the
 field, and don't know their own power.  They would overcome us entirely
 if they did.
@@ -1380,13 +1387,13 @@ recollected herself, and paused, like a modest creature, as she was.
 
 ``To-morrow your Papa and I dine out,'' said Mrs.\ Sedley.
 
-``You don't suppose that I'm going, Mrs.\ Sed?'' said her husband, ``and
+``You don't suppose that \emph{I}'m going, Mrs.\ Sed?'' said her husband, ``and
 that a woman of your years and size is to catch cold, in such an
 abominable damp place?''
 
 ``The children must have someone with them,'' cried Mrs.\ Sedley.
 
-``Let Joe go,'' said-his father, laughing.  ``He's big enough.'' At which
+``Let Joe go,'' said-his father, laughing.  ``He's \emph{big} enough.'' At which
 speech even Mr.\ Sambo at the sideboard burst out laughing, and poor fat
 Joe felt inclined to become a parricide almost.
 
@@ -1429,11 +1436,11 @@ spelt twelfth without the f?''
 ``It seems like yesterday, don't it, John?''\ said Mrs.\ Sedley to her
 husband; and that night in a conversation which took place in a front
 room in the second floor, in a sort of tent, hung round with chintz of
-a rich and fantastic India pattern, and double with calico of a tender
+a rich and fantastic India pattern, and \foreign{doubl\'e} with calico of a tender
 rose-colour; in the interior of which species of marquee was a
 featherbed, on which were two pillows, on which were two round red
 faces, one in a laced nightcap, and one in a simple cotton one, ending
-in a tassel---in a CURTAIN LECTURE, I say, Mrs.\ Sedley took her husband
+in a tassel---in \emph{a curtain lecture,} I say, Mrs.\ Sedley took her husband
 to task for his cruel conduct to poor Joe.
 
 ``It was quite wicked of you, Mr.\ Sedley,'' said she, ``to torment the
@@ -1457,7 +1464,7 @@ the first woman who fishes for him, hooks him.''
 Sedley, with great energy.
 
 ``Why not she as well as another, Mrs.\ Sedley? The girl's a white face
-at any rate.  I don't care who marries him.  Let Joe please himself.''
+at any rate.  \emph{I} don't care who marries him.  Let Joe please himself.''
 
 And presently the voices of the two speakers were hushed, or were
 replaced by the gentle but unromantic music of the nose; and save when
@@ -1484,7 +1491,7 @@ to dine with Alderman Balls at Highbury Barn, there came on such a
 thunder-storm as only happens on Vauxhall nights, and as obliged the
 young people, perforce, to remain at home.  Mr.\ Osborne did not seem in
 the least disappointed at this occurrence. He and Joseph Sedley drank a
-fitting quantity of port-wine, tete-a-tete, in the dining-room, during
+fitting quantity of port-wine, \foreign{t\^ete-\`a-t\^ete}, in the dining-room, during
 the drinking of which Sedley told a number of his best Indian stories;
 for he was extremely talkative in man's society; and afterwards Miss
 Amelia Sedley did the honours of the drawing-room; and these four young
@@ -1520,11 +1527,11 @@ taller than myself.''
 ``How good of Mr.\ Sedley to go to your school and give you the money!''\ %
 exclaimed Rebecca, in accents of extreme delight.
 
-``Yes, and after I had cut the tassels of his boots too. Boys never
+``Yes, and after I had cut the tassels of his boots too. Boys never % HOGG: I am SURE this should be tassels ``off'' but both sources agree on ``of''.
 forget those tips at school, nor the givers.''
 
 ``I delight in Hessian boots,'' said Rebecca.  Jos Sedley, who admired
-his own legs prodigiously, and always wore this ornamental chaussure,
+his own legs prodigiously, and always wore this ornamental \foreign{chaussure},
 was extremely pleased at this remark, though he drew his legs under his
 chair as it was made.
 
@@ -1564,7 +1571,7 @@ situated, as pianos usually are, in the back drawing-room; and as it
 was rather dark, Miss Amelia, in the most unaffected way in the world,
 put her hand into Mr.\ Osborne's, who, of course, could see the way
 among the chairs and ottomans a great deal better than she could.  But
-this arrangement left Mr.\ Joseph Sedley tete-a-tete with Rebecca, at
+this arrangement left Mr.\ Joseph Sedley \foreign{t\^ete-\`a-t\^ete} with Rebecca, at
 the drawing-room table, where the latter was occupied in knitting a
 green silk purse.
 
@@ -1602,10 +1609,10 @@ Governor-General, patronised; and then he described a tiger-hunt; and
 the manner in which the mahout of his elephant had been pulled off his
 seat by one of the infuriated animals.  How delighted Miss Rebecca was
 at the Government balls, and how she laughed at the stories of the
-Scotch aides-de-camp, and called Mr.\ Sedley a sad wicked satirical
+Scotch \foreign{aides-de-camp}, and called Mr.\ Sedley a sad wicked satirical
 creature; and how frightened she was at the story of the elephant! ``For
 your mother's sake, dear Mr.\ Sedley,'' she said, ``for the sake of all
-your friends, promise NEVER to go on one of those horrid expeditions.''
+your friends, promise \emph{never} to go on one of those horrid expeditions.''
 
 ``Pooh, pooh, Miss Sharp,'' said he, pulling up his shirt-collars; ``the
 danger makes the sport only the pleasanter.'' He had never been but once
@@ -1633,8 +1640,8 @@ most tender friendship for Rebecca, and discovered a million of virtues
 and amiable qualities in her which she had not perceived when they were
 at Chiswick together.  For the affection of young ladies is of as rapid
 growth as Jack's bean-stalk, and reaches up to the sky in a night.  It
-is no blame to them that after marriage this Sehnsucht nach der Liebe
-subsides.  It is what sentimentalists, who deal in very big words, call
+is no blame to them that after marriage this \foreign{Sehnsucht nach der Liebe}
+subsides.  It is what sentimentalists, who deal in \emph{very} big words, call
 a yearning after the Ideal, and simply means that women are commonly
 not satisfied until they have husbands and children on whom they may
 centre affections, which are spent elsewhere, as it were, in small
@@ -1663,8 +1670,8 @@ fashion forty years ago, and in which British tars, our King, poor
 Susan, blue-eyed Mary, and the like, were the principal themes. They
 are not, it is said, very brilliant, in a musical point of view, but
 contain numberless good-natured, simple appeals to the affections,
-which people understood better than the milk-and-water lagrime,
-sospiri, and felicita of the eternal Donizettian music with which we
+which people understood better than the milk-and-water \foreign{lagrime}, % HOGG: is this foreign?
+\foreign{sospiri}, and \foreign{felicit\`a} of the eternal Donizettian music with which we % HOGG: same here?
 are favoured now-a-days.
 
 Conversation of a sentimental sort, befitting the subject, was carried
@@ -1674,6 +1681,8 @@ to listen on the landing-place.
 
 Among these ditties was one, the last of the concert, and to the
 following effect:
+
+% HOGG: format poem correctly!!
 
 Ah! bleak and barren was the moor, Ah! loud and piercing was the storm,
 The cottage roof was shelter'd sure, The cottage hearth was bright and
