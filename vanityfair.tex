@@ -6,7 +6,7 @@
 
 % to-do list:
 % -----------
-% - next Chapter to carefully compare: II
+% - next Chapter to carefully compare: III
 % - spacing after quotations, as in ``blah blah!'' said Jos --- this puts too much space before ``said'' needs \ .
 % - find quoted correspondence and notes and set them properly with margins.
 % - almost all italics from my edition have been eradicated here... fix these?
@@ -25,13 +25,16 @@
 \renewcommand{\sffamily}{\relax} % remove all sans-serif forever
 
 % spacings
-\geometry{hmargin={2cm, 2cm}}
-\geometry{vmargin={2.5cm, 2.5cm}}
+\geometry{hmargin={2cm, 1.5cm}}
+\geometry{vmargin={2.0cm, 1.5cm}}
 \newlength{\hoggskip}
 \setlength{\hoggskip}{1.0833\baselineskip}
 \linespread{1.0833} % 10/13 line spacing
 \setlength{\parindent}{\hoggskip} % make the indents like square blocks
+\frenchspacing % no extra space after sentences!
 
+% formatting of text chunks
+% for long block-quotes:
 \makeatletter
 \renewenvironment{quotation} % idea from http://tex.stackexchange.com/questions/29640/how-to-modify-spacing-around-quotation-environment
                {\list{}{\listparindent=\hoggskip
@@ -43,9 +46,13 @@
                 \item\relax}
                {\endlist}
 \makeatother
+% for headers on letters and signatures:
 \newcommand{\longindent}{\noindent\rule{0.4\textwidth}{0pt}}
+% for thematic breaks (like in Chapter II):
+\newcommand{\thematicbreak}{\par\noindent~\hfill---\hfill~\par\noindent}
 
 % header hacking
+\setlength{\headsep}{0.5\hoggskip}
 \renewcommand{\MakeUppercase}[1]{{#1}}
 \pagestyle{fancy}
 \renewcommand{\thechapter}{\Roman{chapter}.}
@@ -578,7 +585,7 @@ of threescore and eight, and had said in awful voice, ``Boy, take down
 your pant---''? Well, well, Miss Sedley was exceedingly alarmed at this
 act of insubordination.
 
-``How could you do so, Rebecca?'' at last she said, after a pause.
+``How could you do so, Rebecca?''\ at last she said, after a pause.
 
 ``Why, do you think Miss Pinkerton will come out and order me back to
 the black-hole?'' said Rebecca, laughing.
@@ -592,9 +599,9 @@ out, that I wouldn't.  O how I should like to see her floating in the
 water yonder, turban and all, with her train streaming after her, and
 her nose like the beak of a wherry.''
 
-``Hush!'' cried Miss Sedley.
+``Hush!''\ cried Miss Sedley.
 
-``Why, will the black footman tell tales?'' cried Miss Rebecca, laughing.
+``Why, will the black footman tell tales?''\ cried Miss Rebecca, laughing.
 ``He may go back and tell Miss Pinkerton that I hate her with all my
 soul; and I wish he would; and I wish I had a means of proving it, too.
 For two years I have only had insults and outrage from her. I have been
@@ -604,10 +611,10 @@ little girls in the lower schoolroom, and to talk French to the Misses,
 until I grew sick of my mother tongue. But that talking French to Miss
 Pinkerton was capital fun, wasn't it? She doesn't know a word of
 French, and was too proud to confess it.  I believe it was that which
-made her part with me; and so thank Heaven for French.  Vive la France!
-Vive l'Empereur! Vive Bonaparte!''
+made her part with me; and so thank Heaven for French.  \foreign{Vive la France!
+Vive l'Empereur! Vive Bonaparte!}''
 
-``O Rebecca, Rebecca, for shame!'' cried Miss Sedley; for this was the
+``O Rebecca, Rebecca, for shame!''\ cried Miss Sedley; for this was the
 greatest blasphemy Rebecca had as yet uttered; and in those days, in
 England, to say, ``Long live Bonaparte!'' was as much as to say, ``Long
 live Lucifer!'' ``How can you---how dare you have such wicked, revengeful
@@ -643,6 +650,7 @@ vanquish Rebecca's hard-heartedness and ill-humour; and, by a thousand
 kind words and offices, overcome, for once at least, her hostility to
 her kind.
 
+\thematicbreak
 Miss Sharp's father was an artist, and in that quality had given
 lessons of drawing at Miss Pinkerton's school. He was a clever man; a
 pleasant companion; a careless student; with a great propensity for
@@ -665,7 +673,7 @@ spoke French with purity and a Parisian accent.  It was in those days
 rather a rare accomplishment, and led to her engagement with the
 orthodox Miss Pinkerton.  For her mother being dead, her father,
 finding himself not likely to recover, after his third attack of
-delirium tremens, wrote a manly and pathetic letter to Miss Pinkerton,
+\foreign{delirium tremens}, wrote a manly and pathetic letter to Miss Pinkerton, % HOGG: punctuation and \foreign
 recommending the orphan child to her protection, and so descended to
 the grave, after two bailiffs had quarrelled over his corpse.  Rebecca
 was seventeen when she came to Chiswick, and was bound over as an
@@ -705,7 +713,7 @@ such a dangerous bird into her cage?
 
 The fact is, the old lady believed Rebecca to be the meekest creature
 in the world, so admirably, on the occasions when her father brought
-her to Chiswick, used Rebecca to perform the part of the ingenue; and
+her to Chiswick, used Rebecca to perform the part of the \foreign{ing\'enue}; and
 only a year before the arrangement by which Rebecca had been admitted
 into her house, and when Rebecca was sixteen years old, Miss Pinkerton
 majestically, and with a little speech, made her a present of a
@@ -818,7 +826,7 @@ And so the schoolmistress reconciled the recommendation to her
 conscience, and the indentures were cancelled, and the apprentice was
 free.  The battle here described in a few lines, of course, lasted for
 some months.  And as Miss Sedley, being now in her seventeenth year,
-was about to leave school, and had a friendship for Miss Sharp (``'tis
+was about to leave school, and had a friendship for Miss Sharp (``\,'tis
 the only point in Amelia's behaviour,'' said Minerva, ``which has not
 been satisfactory to her mistress''), Miss Sharp was invited by her
 friend to pass a week with her at home, before she entered upon her
@@ -830,7 +838,7 @@ was not quite a new one for Rebecca---(indeed, if the truth must be told
 with respect to the Crisp affair, the tart-woman hinted to somebody,
 who took an affidavit of the fact to somebody else, that there was a
 great deal more than was made public regarding Mr.\ Crisp and Miss
-Sharp, and that his letter was in answer to another letter).  But who
+Sharp, and that his letter was \emph{in answer} to another letter).  But who
 can tell you the real truth of the matter? At all events, if Rebecca
 was not beginning the world, she was beginning it over again.
 
@@ -876,7 +884,7 @@ brother! Oh, how you must love him!''
 
 Amelia laughed.
 
-``What! don't you love him? you, who say you love everybody?''
+``What!\ \emph{don't} you love him?\ you, who say you love everybody?''
 
 ``Yes, of course, I do---only---''
 
@@ -921,7 +929,7 @@ white cornelian necklace as she put it on; and vowed she would never,
 never part with it.  When the dinner-bell rang she went downstairs with
 her arm round her friend's waist, as is the habit of young ladies. She
 was so agitated at the drawing-room door, that she could hardly find
-courage to enter.  ``Feel my heart, how it beats, dear!'' said she to her
+courage to enter.  ``Feel my heart, how it beats, dear!''\ said she to her
 friend.
 
 ``No, it doesn't,'' said Amelia.  ``Come in, don't be frightened.  Papa
@@ -1794,7 +1802,7 @@ of silk was just wound round the card; but Mr.\ Jos had never spoken.
 
 ``I am sure he will to-night, dear,'' Amelia said, as she pressed
 Rebecca's hand; and Sedley, too, had communed with his soul, and said
-to himself, ``'Gad, I'll pop the question at Vauxhall.''
+to himself, ``\,'Gad, I'll pop the question at Vauxhall.''
 
 
 
@@ -9823,7 +9831,7 @@ disobedience would only be followed by resistance on his.''
 
 ``Why, hang it, man, you don't call offering him eight or ten thousand a
 year threatening him?'' Mr.\ Osborne said, with still provoking good
-humour.  ``'Gad, if Miss S. will have me, I'm her man. I ain't
+humour.  ``\,'Gad, if Miss S. will have me, I'm her man. I ain't
 particular about a shade or so of tawny.'' And the old gentleman gave
 his knowing grin and coarse laugh.
 
@@ -11468,7 +11476,7 @@ County Kildare.''
 
 ``And Muryan Square, sure enough,'' the Major whispered.
 
-``'Twas there ye coorted me, Meejor dear,'' the lady said; and the Major
+``\,'Twas there ye coorted me, Meejor dear,'' the lady said; and the Major
 assented to this as to every other proposition which was made generally
 in company.
 
@@ -11509,7 +11517,7 @@ the family.  Faith, you've got such a nice good-natured face and way
 widg you, that I'm sure we'll agree; and that you'll be an addition to
 our family anyway.''
 
-``'Deed and she will,'' said O'Dowd, with an approving air, and Amelia
+``\,'Deed and she will,'' said O'Dowd, with an approving air, and Amelia
 felt herself not a little amused and grateful to be thus suddenly
 introduced to so large a party of relations.
 
@@ -12004,7 +12012,7 @@ bleedn?  He always used to say 'twas his nose bleedn, till he must have
 pomped all the blood out of 'um.  An't the magnolias at Glenmalony as
 big as taykettles, O'Dowd?''
 
-``'Deed then they are, and bigger, Peggy,'' the Major said.  When the
+``\,'Deed then they are, and bigger, Peggy,'' the Major said.  When the
 conversation was interrupted in the manner stated by the arrival of the
 officer who purchased the bouquet.
 
@@ -13443,7 +13451,7 @@ The savour of the soup, however, was agreeable to Mrs.\ O'Dowd's
 nostrils: and she thought she would bear Mr.\ Jos company.  So the two
 sate down to their meal. ``God bless the meat,'' said the Major's wife,
 solemnly: she was thinking of her honest Mick, riding at the head of
-his regiment:  ``'Tis but a bad dinner those poor boys will get to-day,''
+his regiment:  ``\,'Tis but a bad dinner those poor boys will get to-day,''
 she said, with a sigh, and then, like a philosopher, fell to.
 
 Jos's spirits rose with his meal.  He would drink the regiment's
@@ -16424,7 +16432,7 @@ fineness of his foot and ankle, and always caressing his garter-knee.
 ``The shepherd is too fond of playing at cards and going to his clubs,''
 answered Becky, laughing.
 
-``'Gad, what a debauched Corydon!''\ said my lord---``what a mouth for a
+``\,'Gad, what a debauched Corydon!''\ said my lord---``what a mouth for a
 pipe!''
 
 ``I take your three to two,'' here said Rawdon, at the card-table.
