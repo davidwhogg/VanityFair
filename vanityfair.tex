@@ -45,7 +45,7 @@
 % for long block-quotes:
 \makeatletter
 \renewenvironment{quotation} % idea from http://tex.stackexchange.com/questions/29640/how-to-modify-spacing-around-quotation-environment
-               {\list{}{\listparindent=\hoggskip
+               {\par~\list{}{\listparindent=\hoggskip
                         \itemindent=\listparindent
                         \leftmargin=2.0\hoggskip
                         \rightmargin=1.0\hoggskip
@@ -55,7 +55,7 @@
                {\endlist~}
 \makeatother
 % for headers on letters and signatures:
-\newcommand{\longindent}{\noindent\rule{0.4\textwidth}{0pt}}
+\newcommand{\longindent}{\noindent\rule{0.3\textwidth}{0pt}}
 % for thematic breaks (like in Chapter II):
 \newcommand{\thematicbreak}{\par\noindent~\hfill---\hfill~\par\noindent}
 
@@ -488,7 +488,7 @@ doubt, \textsc{Jones}, who reads this book at his Club, will pronounce to be
 excessively foolish, trivial, twaddling, and ultra-sentimental.  Yes; I
 can see Jones at this minute (rather flushed with his joint of mutton
 and half pint of wine), taking out his pencil and scoring under the
-words ``foolish, twaddling,'' \&c., and adding to them his own remark of
+words ``foolish, twaddling,'' \foreign{\&c.}, and adding to them his own remark of
 ``\emph{quite true}.'' Well, he is a lofty man of genius, and admires the great
 and heroic in life and novels; and so had better take warning and go
 elsewhere.
@@ -1746,7 +1746,7 @@ When the parents of the house of Sedley returned from their
 dinner-party, they found the young people so busy in talking, that they
 had not heard the arrival of the carriage, and Mr.\ Joseph was in the
 act of saying, ``My dear Miss Sharp, one little teaspoonful of jelly to
-recruit you after your immense---your---your delightful exertions.''
+recruit you after your immense---your---your \emph{delightful} exertions.''
 
 ``Bravo, Jos!''\ said Mr.\ Sedley; on hearing the bantering of which
 well-known voice, Jos instantly relapsed into an alarmed silence, and
@@ -1754,7 +1754,7 @@ quickly took his departure. He did not lie awake all night thinking
 whether or not he was in love with Miss Sharp; the passion of love
 never interfered with the appetite or the slumber of Mr.\ Joseph Sedley;
 but he thought to himself how delightful it would be to hear such songs
-as those after Cutcherry---what a distinguee girl she was---how she could
+as those after Cutcherry---what a \foreign{distingu\'ee} girl she was---how she could
 speak French better than the Governor-General's lady herself---and what
 a sensation she would make at the Calcutta balls. ``It's evident the
 poor devil's in love with me,'' thought he.  ``She is just as rich as
@@ -1797,7 +1797,7 @@ of hand.)
 ``O heavenly, heavenly flowers!''\ exclaimed Miss Sharp, and smelt them
 delicately, and held them to her bosom, and cast up her eyes to the
 ceiling, in an ecstasy of admiration.  Perhaps she just looked first
-into the bouquet, to see whether there was a billet-doux hidden among
+into the bouquet, to see whether there was a \foreign{billet-doux} hidden among
 the flowers; but there was no letter.
 
 ``Do they talk the language of flowers at Boggley Wollah, Sedley?''\ asked
@@ -1815,7 +1815,7 @@ the slicing of the pine-apple; but Jos was left alone with Rebecca, who
 had resumed her work, and the green silk and the shining needles were
 quivering rapidly under her white slender fingers.
 
-``What a beautiful, BYOO-OOTIFUL song that was you sang last night, dear
+``What a beautiful, \emph{byoo-ootiful} song that was you sang last night, dear
 Miss Sharp,'' said the Collector.  ``It made me cry almost; 'pon my
 honour it did.''
 
@@ -1829,15 +1829,18 @@ there I was, singing away like---a robin.''
 
 ``O you droll creature! Do let me hear you sing it.''
 
-``Me? No, you, Miss Sharp; my dear Miss Sharp, do sing it.''  ``Not now,
+``Me? No, you, Miss Sharp; my dear Miss Sharp, do sing it.''
+
+``Not now,
 Mr.\ Sedley,'' said Rebecca, with a sigh.  ``My spirits are not equal to
 it; besides, I must finish the purse.  Will you help me, Mr.\ Sedley?''
 And before he had time to ask how, Mr.\ Joseph Sedley, of the East India
-Company's service, was actually seated tete-a-tete with a young lady,
+Company's service, was actually seated \foreign{t\^ete-\`a-t\^ete} with a young lady,
 looking at her with a most killing expression; his arms stretched out
 before her in an imploring attitude, and his hands bound in a web of
 green silk, which she was unwinding.
 
+\thematicbreak
 In this romantic position Osborne and Amelia found the interesting
 pair, when they entered to announce that tiffin was ready.  The skein
 of silk was just wound round the card; but Mr.\ Jos had never spoken.
@@ -1845,7 +1848,6 @@ of silk was just wound round the card; but Mr.\ Jos had never spoken.
 ``I am sure he will to-night, dear,'' Amelia said, as she pressed
 Rebecca's hand; and Sedley, too, had communed with his soul, and said
 to himself, ``\,'Gad, I'll pop the question at Vauxhall.''
-
 
 
 \chapter{Dobbin of Ours}
@@ -1931,12 +1933,12 @@ the subject.
 
 ``I can't,'' says Dobbin; ``I want to finish my letter.''
 
-``You CAN'T?''\ says Mr.\ Cuff, laying hold of that document (in which many
+``You \emph{can't?}''\ says Mr.\ Cuff, laying hold of that document (in which many % HOGG: punctuation
 words were scratched out, many were mis-spelt, on which had been spent
 I don't know how much thought, and labour, and tears; for the poor
 fellow was writing to his mother, who was fond of him, although she was
 a grocer's wife, and lived in a back parlour in Thames Street).  ``You
-CAN'T?''\ says Mr.\ Cuff: ``I should like to know why, pray? Can't you
+\emph{can't?}''\ says Mr.\ Cuff: ``I should like to know why, pray? Can't you
 write to old Mother Figs to-morrow?''
 
 ``Don't call names,'' Dobbin said, getting off the bench very nervous.
@@ -1945,19 +1947,20 @@ write to old Mother Figs to-morrow?''
 
 ``Put down the letter,'' Dobbin replied; ``no gentleman readth letterth.''
 
-``Well, NOW will you go?''\ says the other.
+``Well, \emph{now} will you go?''\ says the other.
 
-``No, I won't.  Don't strike, or I'll THMASH you,'' roars out Dobbin,
+``No, I won't.  Don't strike, or I'll \emph{thmash} you,'' roars out Dobbin,
 springing to a leaden inkstand, and looking so wicked, that Mr.\ Cuff
 paused, turned down his coat sleeves again, put his hands into his
 pockets, and walked away with a sneer.  But he never meddled personally
 with the grocer's boy after that; though we must do him the justice to
 say he always spoke of Mr.\ Dobbin with contempt behind his back.
 
+\thematicbreak
 Some time after this interview, it happened that Mr.\ Cuff, on a
 sunshiny afternoon, was in the neighbourhood of poor William Dobbin,
 who was lying under a tree in the playground, spelling over a favourite
-copy of the Arabian Nights which he had apart from the rest of the
+copy of the \textit{Arabian Nights} which he had apart from the rest of the
 school, who were pursuing their various sports---quite lonely, and
 almost happy.  If people would but leave children to themselves; if
 teachers would cease to bully them; if parents would not insist upon
@@ -1968,7 +1971,7 @@ how far more beautiful and sacred are the thoughts of the poor lad or
 girl whom you govern likely to be, than those of the dull and
 world-corrupted person who rules him?)---if, I say, parents and masters
 would leave their children alone a little more, small harm would
-accrue, although a less quantity of as in praesenti might be acquired.
+accrue, although a less quantity of \foreign{as in praesenti} might be acquired. % HOGG: correct?
 
 Well, William Dobbin had for once forgotten the world, and was away
 with Sindbad the Sailor in the Valley of Diamonds, or with Prince Ahmed
@@ -2030,8 +2033,8 @@ out your hand, you little beast.''
 said, in reply to the first part of Cuff's sentence; and little
 Osborne, gasping and in tears, looked up with wonder and incredulity at
 seeing this amazing champion put up suddenly to defend him: while
-Cuff's astonishment was scarcely less.  Fancy our late monarch George
-III when he heard of the revolt of the North American colonies: fancy
+Cuff's astonishment was scarcely less.  Fancy our late monarch George~III
+when he heard of the revolt of the North American colonies: fancy
 brazen Goliath when little David stepped forward and claimed a meeting;
 and you have the feelings of Mr.\ Reginald Cuff when this rencontre was
 proposed to him.
@@ -2045,6 +2048,7 @@ friends between this time and that.''
 ``Well, if you like,'' little Osborne replied; for you see his papa kept
 a carriage, and he was rather ashamed of his champion.
 
+\thematicbreak
 Yes, when the hour of battle came, he was almost ashamed to say, ``Go
 it, Figs''; and not a single other boy in the place uttered that cry for
 the first two or three rounds of this famous combat; at the
@@ -2086,7 +2090,7 @@ thirteenth time.
 
 If I had the pen of a Napier, or a Bell's Life, I should like to
 describe this combat properly.  It was the last charge of the
-Guard---(that is, it would have been, only Waterloo had not yet taken
+Guard---(that is, it \emph{would} have been, only Waterloo had not yet taken
 place)---it was Ney's column breasting the hill of La Haye Sainte,
 bristling with ten thousand bayonets, and crowned with twenty
 eagles---it was the shout of the beef-eating British, as leaping down
@@ -2095,7 +2099,7 @@ other words, Cuff coming up full of pluck, but quite reeling and
 groggy, the Fig-merchant put in his left as usual on his adversary's
 nose, and sent him down for the last time.
 
-``I think that will do for him,'' Figs said, as his opponent dropped as
+``I think \emph{that} will do for him,'' Figs said, as his opponent dropped as
 neatly on the green as I have seen Jack Spot's ball plump into the
 pocket at billiards; and the fact is, when time was called, Mr.\ %
 Reginald Cuff was not able, or did not choose, to stand up again.
@@ -2112,11 +2116,13 @@ but got back all his ascendancy over the boys which his defeat had
 nearly cost him.
 
 Young Osborne wrote home to his parents an account of the transaction.
+\begin{quotation}
+\longindent Sugarcane House, Richmond, March, 18---
 
+\noindent
+Dear Mama,
 
-Sugarcane House, Richmond, March, 18---
-
-DEAR MAMA,---I hope you are quite well.  I should be much obliged to you
+I hope you are quite well.  I should be much obliged to you
 to send me a cake and five shillings. There has been a fight here
 between Cuff \& Dobbin. Cuff, you know, was the Cock of the School.
 They fought thirteen rounds, and Dobbin Licked.  So Cuff is now Only
@@ -2128,11 +2134,14 @@ goes home every Saturday, but can't this, because he has 2 Black Eyes.
 He has a white Pony to come and fetch him, and a groom in livery on a
 bay mare.  I wish my Papa would let me have a Pony, and I am
 
-Your dutiful Son, GEORGE SEDLEY OSBORNE
+\longindent Your dutiful Son,
 
-P.S.---Give my love to little Emmy.  I am cutting her out a Coach in
+\longindent George Sedley Osborne
+
+\noindent
+P. S.---Give my love to little Emmy.  I am cutting her out a Coach in
 cardboard.  Please not a seed-cake, but a plum-cake.
-
+\end{quotation}
 
 In consequence of Dobbin's victory, his character rose prodigiously in
 the estimation of all his schoolfellows, and the name of Figs, which
@@ -2154,7 +2163,7 @@ and even there got a fair place for him.  It was discovered, that
 although dull at classical learning, at mathematics he was uncommonly
 quick.  To the contentment of all he passed third in algebra, and got a
 French prize-book at the public Midsummer examination. You should have
-seen his mother's face when Telemaque (that delicious romance) was
+seen his mother's face when \foreign{T\'el\'emaque} (that delicious romance) was
 presented to him by the Doctor in the face of the whole school and the
 parents and company, with an inscription to Gulielmo Dobbin.  All the
 boys clapped hands in token of applause and sympathy.  His blushes, his
@@ -2183,12 +2192,13 @@ latter you might read inscriptions to George Sedley Osborne, Esquire,
 from his attached friend William Dobbin---the which tokens of homage
 George received very graciously, as became his superior merit.
 
+\thematicbreak
 So that Lieutenant Osborne, when coming to Russell Square on the day of
 the Vauxhall party, said to the ladies, ``Mrs.\ Sedley, Ma'am, I hope you
 have room; I've asked Dobbin of ours to come and dine here, and go with
 us to Vauxhall.  He's almost as modest as Jos.''
 
-``Modesty! pooh,'' said the stout gentleman, casting a vainqueur look at
+``Modesty!\ pooh,'' said the stout gentleman, casting a \foreign{vainqueur} look at
 Miss Sharp.
 
 ``He is---but you are incomparably more graceful, Sedley,'' Osborne added,
@@ -2206,7 +2216,7 @@ Such figures! my dears.''
 ``The Alderman's very rich, isn't he?''\ Osborne said archly.  ``Don't you
 think one of the daughters would be a good spec for me, Ma'am?''
 
-``You foolish creature! Who would take you, I should like to know, with
+``You foolish creature! Who would take \emph{you,} I should like to know, with
 your yellow face?''
 
 ``Mine a yellow face? Stop till you see Dobbin.  Why, he had the yellow
@@ -2220,15 +2230,15 @@ which the young gentleman himself regarded with no ordinary
 complacency, she thought in her little heart that in His Majesty's
 army, or in the wide world, there never was such a face or such a hero.
 ``I don't care about Captain Dobbin's complexion,'' she said, ``or about
-his awkwardness. I shall always like him, I know,'' her little reason
+his awkwardness. \emph{I} shall always like him, I know,'' her little reason
 being, that he was the friend and champion of George.
 
 ``There's not a finer fellow in the service,'' Osborne said, ``nor a
 better officer, though he is not an Adonis, certainly.'' And he looked
 towards the glass himself with much naivete; and in so doing, caught
 Miss Sharp's eye fixed keenly upon him, at which he blushed a little,
-and Rebecca thought in her heart, ``Ah, mon beau Monsieur! I think I
-have YOUR gauge''---the little artful minx!
+and Rebecca thought in her heart, ``\foreign{Ah, mon beau Monsieur!} I think I
+have \emph{your} gauge''---the little artful minx!
 
 That evening, when Amelia came tripping into the drawing-room in a
 white muslin frock, prepared for conquest at Vauxhall, singing like a
@@ -2314,11 +2324,11 @@ genteel, suppose we had resorted to the entirely low, and described
 what was going on in Mr.\ Sedley's kitchen---how black Sambo was in love
 with the cook (as indeed he was), and how he fought a battle with the
 coachman in her behalf; how the knife-boy was caught stealing a cold
-shoulder of mutton, and Miss Sedley's new femme de chambre refused to
+shoulder of mutton, and Miss Sedley's new \foreign{femme de chambre} refused to
 go to bed without a wax candle; such incidents might be made to provoke
 much delightful laughter, and be supposed to represent scenes of
 ``life.'' Or if, on the contrary, we had taken a fancy for the terrible,
-and made the lover of the new femme de chambre a professional burglar,
+and made the lover of the new \foreign{femme de chambre} a professional burglar,
 who bursts into the house with his band, slaughters black Sambo at the
 feet of his master, and carries off Amelia in her night-dress, not to
 be let loose again till the third volume, we should easily have
@@ -2344,7 +2354,7 @@ of fashion, and laughed heartily at his pompous braggadocio stories.
 ``I shall leave the fellow half my property,'' he said; ``and he will
 have, besides, plenty of his own; but as I am perfectly sure that if
 you, and I, and his sister were to die to-morrow, he would say `Good
-Gad!' and eat his dinner just as well as usual, I am not going to make
+Gad!'\ and eat his dinner just as well as usual, I am not going to make
 myself anxious about him. Let him marry whom he likes.  It's no affair
 of mine.''
 
@@ -2383,7 +2393,7 @@ Jos's arm, as a matter of course, on going to dinner; she had sate by
 him on the box of his open carriage (a most tremendous ``buck'' he was,
 as he sat there, serene, in state, driving his greys), and though
 nobody said a word on the subject of the marriage, everybody seemed to
-understand it.  All she wanted was the proposal, and ah! how Rebecca
+understand it.  All she wanted was the proposal, and ah!\ how Rebecca
 now felt the want of a mother!---a dear, tender mother, who would have
 managed the business in ten minutes, and, in the course of a little
 delicate confidential conversation, would have extracted the
@@ -2415,7 +2425,7 @@ young officer carrying this female burthen); but William Dobbin was
 very little addicted to selfish calculation at all; and so long as his
 friend was enjoying himself, how should he be discontented? And the
 truth is, that of all the delights of the Gardens; of the hundred
-thousand extra lamps, which were always lighted; the fiddlers in cocked
+thousand \emph{extra} lamps, which were always lighted; the fiddlers in cocked
 hats, who played ravishing melodies under the gilded cockle-shell in
 the midst of the gardens; the singers, both of comic and sentimental
 ballads, who charmed the ears there; the country dances, formed by
@@ -2440,6 +2450,7 @@ the stairs, as she came down to dinner.
 He burst out laughing at himself; for the truth is, he could sing no
 better than an owl.
 
+\thematicbreak
 It is to be understood, as a matter of course, that our young people,
 being in parties of two and two, made the most solemn promises to keep
 together during the evening, and separated in ten minutes afterwards.
@@ -2450,7 +2461,7 @@ interval.
 What were the adventures of Mr.\ Osborne and Miss Amelia? That is a
 secret.  But be sure of this---they were perfectly happy, and correct in
 their behaviour; and as they had been in the habit of being together
-any time these fifteen years, their tete-a-tete offered no particular
+any time these fifteen years, their \foreign{t\^ete-\`a-t\^ete} offered no particular
 novelty.
 
 But when Miss Rebecca Sharp and her stout companion lost themselves in
@@ -2465,13 +2476,13 @@ little incident increased the tenderness and confidence of that
 gentleman to such a degree, that he told her several of his favourite
 Indian stories over again for, at least, the sixth time.
 
-``How I should like to see India!'' said Rebecca.
+``How I should like to see India!''\ said Rebecca.
 
-``SHOULD you?'' said Joseph, with a most killing tenderness; and was no
+``\emph{Should} you?''\ said Joseph, with a most killing tenderness; and was no
 doubt about to follow up this artful interrogatory by a question still
 more tender (for he puffed and panted a great deal, and Rebecca's hand,
 which was placed near his heart, could count the feverish pulsations of
-that organ), when, oh, provoking! the bell rang for the fireworks, and,
+that organ), when, oh, provoking!\ the bell rang for the fireworks, and,
 a great scuffling and running taking place, these interesting lovers
 were obliged to follow in the stream of people.
 
@@ -2482,7 +2493,7 @@ nobody took any notice of him.  Covers were laid for four.  The mated
 pairs were prattling away quite happily, and Dobbin knew he was as
 clean forgotten as if he had never existed in this world.
 
-``I should only be de trop,'' said the Captain, looking at them rather
+``I should only be \foreign{de trop,}'' said the Captain, looking at them rather
 wistfully.  ``I'd best go and talk to the hermit,''---and so he strolled
 off out of the hum of men, and noise, and clatter of the banquet, into
 the dark walk, at the end of which lived that well-known pasteboard
@@ -2508,7 +2519,7 @@ punch influence the fates of all the principal characters in this
 life, although most of them did not taste a drop of it.
 
 The young ladies did not drink it; Osborne did not like it; and the
-consequence was that Jos, that fat gourmand, drank up the whole
+consequence was that Jos, that fat \foreign{gourmand,} drank up the whole
 contents of the bowl; and the consequence of his drinking up the whole
 contents of the bowl was a liveliness which at first was astonishing,
 and then became almost painful; for he talked and laughed so loud as to
@@ -2519,8 +2530,8 @@ state), he almost drew away the audience who were gathered round the
 musicians in the gilt scollop-shell, and received from his hearers a
 great deal of applause.
 
-``Brayvo, Fat un!'' said one; ``Angcore, Daniel Lambert!'' said another;
-``What a figure for the tight-rope!'' exclaimed another wag, to the
+``Brayvo, Fat un!''\ said one; ``Angcore, Daniel Lambert!''\ said another;
+``What a figure for the tight-rope!''\ exclaimed another wag, to the
 inexpressible alarm of the ladies, and the great anger of Mr.\ Osborne.
 
 ``For Heaven's sake, Jos, let us get up and go,'' cried that gentleman,
@@ -2537,12 +2548,12 @@ Mr.\ Osborne was just on the point of knocking down a gentleman in
 top-boots, who proposed to take advantage of this invitation, and a
 commotion seemed to be inevitable, when by the greatest good luck a
 gentleman of the name of Dobbin, who had been walking about the
-gardens, stepped up to the box.  ``Be off, you fools!'' said this
+gardens, stepped up to the box.  ``Be off, you fools!''\ said this
 gentleman---shouldering off a great number of the crowd, who vanished
 presently before his cocked hat and fierce appearance---and he entered
 the box in a most agitated state.
 
-``Good Heavens! Dobbin, where have you been?'' Osborne said, seizing the
+``Good Heavens!\ Dobbin, where \emph{have} you been?''\ Osborne said, seizing the
 white cashmere shawl from his friend's arm, and huddling up Amelia in
 it.---``Make yourself useful, and take charge of Jos here, whilst I take
 the ladies to the carriage.''
@@ -2550,13 +2561,13 @@ the ladies to the carriage.''
 Jos was for rising to interfere---but a single push from Osborne's
 finger sent him puffing back into his seat again, and the lieutenant
 was enabled to remove the ladies in safety.  Jos kissed his hand to
-them as they retreated, and hiccupped out ``Bless you! Bless you!'' Then,
+them as they retreated, and hiccupped out ``Bless you!\ Bless you!'' Then,
 seizing Captain Dobbin's hand, and weeping in the most pitiful way, he
 confided to that gentleman the secret of his loves.  He adored that
 girl who had just gone out; he had broken her heart, he knew he had, by
 his conduct; he would marry her next morning at St.\ George's, Hanover
 Square; he'd knock up the Archbishop of Canterbury at Lambeth: he
-would, by Jove! and have him in readiness; and, acting on this hint,
+would, by Jove!\ and have him in readiness; and, acting on this hint,
 Captain Dobbin shrewdly induced him to leave the gardens and hasten to
 Lambeth Palace, and, when once out of the gates, easily conveyed Mr.\ %
 Jos Sedley into a hackney-coach, which deposited him safely at his
@@ -2568,20 +2579,21 @@ so as to astonish the watchman.  Amelia looked very ruefully at her
 friend, as they went up stairs, and kissed her, and went to bed without
 any more talking.
 
+\thematicbreak
 ``He must propose to-morrow,'' thought Rebecca.  ``He called me his soul's
 darling, four times; he squeezed my hand in Amelia's presence.  He must
 propose to-morrow.'' And so thought Amelia, too. And I dare say she
 thought of the dress she was to wear as bridesmaid, and of the presents
 which she should make to her nice little sister-in-law, and of a
 subsequent ceremony in which she herself might play a principal part,
-\&c., and \&c., and \&c., and \&c.
+\foreign{\&c.}, and \foreign{\&c.}, and \foreign{\&c.}, and \foreign{\&c.}
 
 Oh, ignorant young creatures! How little do you know the effect of rack
 punch! What is the rack in the punch, at night, to the rack in the head
 of a morning? To this truth I can vouch as a man; there is no headache
 in the world like that caused by Vauxhall punch. Through the lapse of
-twenty years, I can remember the consequence of two glasses! two
-wine-glasses! but two, upon the honour of a gentleman; and Joseph
+twenty years, I can remember the consequence of two glasses!\ two
+wine-glasses!\ but two, upon the honour of a gentleman; and Joseph
 Sedley, who had a liver complaint, had swallowed at least a quart of
 the abominable mixture.
 
@@ -2635,7 +2647,7 @@ had been revolving in his mind the marriage question pending between
 Jos and Rebecca, and was not over well pleased that a member of a
 family into which he, George Osborne, of the ---th, was going to marry,
 should make a mesalliance with a little nobody---a little upstart
-governess.  ``You hit, you poor old fellow!'' said Osborne. ``You
+governess.  ``You hit, you poor old fellow!''\ said Osborne. ``You
 terrible! Why, man, you couldn't stand---you made everybody laugh in the
 Gardens, though you were crying yourself.  You were maudlin, Jos.
 Don't you remember singing a song?''
@@ -2689,7 +2701,7 @@ and discomfited mien, persisted in thinking the joke a most diverting
 one, and when Miss Sharp came downstairs, bantered her with a great
 deal of liveliness upon the effect of her charms on the fat civilian.
 
-``O Miss Sharp! if you could but see him this morning,'' he
+``O Miss Sharp!\ if you could but see him this morning,'' he
 said---``moaning in his flowered dressing-gown---writhing on his sofa; if
 you could but have seen him lolling out his tongue to Gollop the
 apothecary.''
@@ -2852,7 +2864,7 @@ cities, and boroughs, Queen's Crawley was no longer so populous a place
 as it had been in Queen Bess's time---nay, was come down to that
 condition of borough which used to be denominated rotten---yet, as Sir
 Pitt Crawley would say with perfect justice in his elegant way,
-``Rotten! be hanged---it produces me a good fifteen hundred a year.''
+``Rotten!\ be hanged---it produces me a good fifteen hundred a year.''
 
 Sir Pitt Crawley (named after the great Commoner) was the son of
 Walpole Crawley, first Baronet, of the Tape and Sealing-Wax Office in
@@ -2996,7 +3008,7 @@ Sir Pitt, who had taken his seat by the fire.
 ``Where's the farden?'' said he.  ``I gave you three halfpence. Where's
 the change, old Tinker?''
 
-``There!'' replied Mrs.\ Tinker, flinging down the coin; ``it's only
+``There!''\ replied Mrs.\ Tinker, flinging down the coin; ``it's only
 baronets as cares about farthings.''
 
 ``A farthing a day is seven shillings a year,'' answered the M.P.; ``seven
@@ -3020,7 +3032,7 @@ Presently the baronet plunged a fork into the saucepan on the fire, and
 withdrew from the pot a piece of tripe and an onion, which he divided
 into pretty equal portions, and of which he partook with Mrs.\ Tinker.
 ``You see, Miss Sharp, when I'm not here Tinker's on board wages: when
-I'm in town she dines with the family. Haw! haw! I'm glad Miss Sharp's
+I'm in town she dines with the family. Haw!\ haw! I'm glad Miss Sharp's
 not hungry, ain't you, Tink?'' And they fell to upon their frugal supper.
 
 After supper Sir Pitt Crawley began to smoke his pipe; and when it
@@ -3129,7 +3141,7 @@ carriage, and mount up beside him---when he covered her up in one of his
 Benjamins, and became perfectly good-humoured---how the asthmatic
 gentleman, the prim lady, who declared upon her sacred honour she had
 never travelled in a public carriage before (there is always such a
-lady in a coach---Alas! was; for the coaches, where are they?), and the
+lady in a coach---Alas!\ was; for the coaches, where are they?), and the
 fat widow with the brandy-bottle, took their places inside---how the
 porter asked them all for money, and got sixpence from the gentleman
 and five greasy halfpence from the fat widow---and how the carriage at
@@ -3155,7 +3167,7 @@ stage-coaches will have become romances---a team of four bays as
 fabulous as Bucephalus or Black Bess.  Ah, how their coats shone, as
 the stable-men pulled their clothes off, and away they went---ah, how
 their tails shook, as with smoking sides at the stage's end they
-demurely walked away into the inn-yard.  Alas!  we shall never hear the
+demurely walked away into the inn-yard.  Alas!\ we shall never hear the
 horn sing at midnight, or see the pike-gates fly open any more.
 Whither, however, is the light four-inside Trafalgar coach carrying us?
 Let us be set down at Queen's Crawley without further divagation, and
@@ -3182,7 +3194,7 @@ side; and I thought of you all night, dancing at the Perkins's, the
 prettiest, I am sure, of all the young ladies at the Ball.  I was
 brought by the groom in the old carriage to Sir Pitt Crawley's town
 house, where, after John the groom had behaved most rudely and
-insolently to me (alas! 'twas safe to insult poverty and misfortune!),
+insolently to me (alas!\ 'twas safe to insult poverty and misfortune!),\ %
 I was given over to Sir P.'s care, and made to pass the night in an old
 gloomy bed, and by the side of a horrid gloomy old charwoman, who keeps
 the house.  I did not sleep one single wink the whole night.
@@ -3262,7 +3274,7 @@ whatdyecallum---old Methusalem.''
 Mr.\ Hodson laughed again.  ``The young men is home from college. They've
 whopped John Scroggins till he's well nigh dead.''
 
-``Whop my second keeper!'' roared out Sir Pitt.
+``Whop my second keeper!''\ roared out Sir Pitt.
 
 ``He was on the parson's ground, sir,'' replied Mr.\ Hodson; and Sir Pitt
 in a fury swore that if he ever caught 'em poaching on his ground, he'd
@@ -3310,7 +3322,7 @@ Pinkerton's school, and the grate is big enough to roast an ox at the
 very least.  Round the room hang I don't know how many generations of
 Crawleys, some with beards and ruffs, some with huge wigs and toes
 turned out, some dressed in long straight stays and gowns that look as
-stiff as towers, and some with long ringlets, and oh, my dear! scarcely
+stiff as towers, and some with long ringlets, and oh, my dear!\ scarcely
 any stays at all.  At one end of the hall is the great staircase all in
 black oak, as dismal as may be, and on either side are tall doors with
 stags' heads over them, leading to the billiard-room and the library,
@@ -3352,7 +3364,7 @@ noble house of Binkie.
 ``This is the new governess, Mr.\ Crawley,'' said Lady Crawley, coming
 forward and taking my hand.  ``Miss Sharp.''
 
-``O!'' said Mr.\ Crawley, and pushed his head once forward and began again
+``O!''\ said Mr.\ Crawley, and pushed his head once forward and began again
 to read a great pamphlet with which he was busy.
 
 ``I hope you will be kind to my girls,'' said Lady Crawley, with her pink
@@ -3519,7 +3531,7 @@ the tale, so that the hat went round, and the bajocchi tumbled into it,
 in the midst of a perfect storm of sympathy.
 
 At the little Paris theatres, on the other hand, you will not only hear
-the people yelling out ``Ah gredin! Ah monstre:'' and cursing the tyrant
+the people yelling out ``\foreign{Ah gredin! Ah monstre:}'' and cursing the tyrant
 of the play from the boxes; but the actors themselves positively refuse
 to play the wicked parts, such as those of infames Anglais, brutal
 Cossacks, and what not, and prefer to appear at a smaller salary, in
@@ -4013,7 +4025,7 @@ devotional exercises.
 ``Shut up your sarmons, Pitt, when Miss Crawley comes down,'' said his
 father; ``she has written to say that she won't stand the preachifying.''
 
-``O, sir! consider the servants.''
+``O, sir!\ consider the servants.''
 
 ``The servants be hanged,'' said Sir Pitt; and his son thought even worse
 would happen were they deprived of the benefit of his instruction.
@@ -4201,7 +4213,7 @@ your presence.  'Tis the humble but happy home of
 
 Your affectionate Martha Crawley
 
-P.S.  Mr.\ Crawley's brother, the baronet, with whom we are not, alas!
+P.S.  Mr.\ Crawley's brother, the baronet, with whom we are not, alas!\ %
 upon those terms of UNITY in which it BECOMES BRETHREN TO DWELL, has a
 governess for his little girls, who, I am told, had the good fortune to
 be educated at Chiswick.  I hear various reports of her; and as I have
@@ -5568,7 +5580,7 @@ Miss ... ---tears choked the utterance of the dame de compagnie, and
 she buried her crushed affections and her poor old red nose in her
 pocket handkerchief.
 
-Rawdon Crawley sent up his name by the sulky femme de chambre, and Miss
+Rawdon Crawley sent up his name by the sulky \foreign{femme de chambre,} and Miss
 Crawley's new companion, coming tripping down from the sick-room, put
 a little hand into his as he stepped forward eagerly to meet her, gave
 a glance of great scorn at the bewildered Briggs, and beckoning the
@@ -6074,7 +6086,7 @@ from Russell Square; where the young ladies, who were not themselves
 invited, and professed the greatest indifference at that slight,
 nevertheless looked at Sir Pitt Crawley's name in the baronetage; and
 learned everything which that work had to teach about the Crawley
-family and their pedigree, and the Binkies, their relatives, \&c., \&c.
+family and their pedigree, and the Binkies, their relatives, \foreign{\&c.}, \foreign{\&c.}
 Rawdon Crawley received George Osborne with great frankness and
 graciousness: praised his play at billiards: asked him when he would
 have his revenge: was interested about Osborne's regiment: and would
@@ -6188,7 +6200,7 @@ Though Rebecca had had the better of him, George was above the meanness
 of talebearing or revenge upon a lady---only he could not help cleverly
 confiding to Captain Crawley, next day, some notions of his regarding
 Miss Rebecca---that she was a sharp one, a dangerous one, a desperate
-flirt, \&c.; in all of which opinions Crawley agreed laughingly, and
+flirt, \foreign{\&c.}; in all of which opinions Crawley agreed laughingly, and
 with every one of which Miss Rebecca was made acquainted before
 twenty-four hours were over.  They added to her original regard for Mr.\ %
 Osborne.  Her woman's instinct had told her that it was George who had
@@ -7242,7 +7254,7 @@ Anna-Maria Road West), where the houses look like baby-houses; where
 the people, looking out of the first-floor windows, must infallibly, as
 you think, sit with their feet in the parlours; where the shrubs in the
 little gardens in front bloom with a perennial display of little
-children's pinafores, little red socks, caps, \&c. (polyandria
+children's pinafores, little red socks, caps, \foreign{\&c.}\ (polyandria
 polygynia); whence you hear the sound of jingling spinets and women
 singing; where little porter pots hang on the railings sunning
 themselves; whither of evenings you see City clerks padding wearily:
@@ -8147,7 +8159,7 @@ inquiries were being made concerning her.
 Of all these industrious researches Miss Crawley had the full benefit.
 Mrs.\ Rawdon Crawley was the daughter of an opera-girl. She had danced
 herself.  She had been a model to the painters.  She was brought up as
-became her mother's daughter.  She drank gin with her father, \&c. \&c.
+became her mother's daughter.  She drank gin with her father, \foreign{\&c.}\ \foreign{\&c.}
 It was a lost woman who was married to a lost man; and the moral to be
 inferred from Mrs.\ Bute's tale was, that the knavery of the pair was
 irremediable, and that no properly conducted person should ever notice
@@ -8392,7 +8404,7 @@ and best of men.''  And the fact is, that George thought he was one of
 the generousest creatures alive: and that he was making a tremendous
 sacrifice in marrying this young creature.
 
-While she and Osborne were having their delightful tete-a-tete above
+While she and Osborne were having their delightful \foreign{t\^ete-\`a-t\^ete} above
 stairs, old Mrs.\ Sedley and Captain Dobbin were conversing below upon
 the state of the affairs, and the chances and future arrangements of
 the young people.  Mrs.\ Sedley having brought the two lovers together
@@ -8512,7 +8524,7 @@ he paused, reflecting on his own consummate hypocrisy; for the day was
 as fine, and the sunshine as bright as it ever is in Coffin Court,
 where the Tapioca Coffee-house is situated: and Mr.\ Dobbin remembered
 that he had seen Mrs.\ Sedley himself only an hour before, having driven
-Osborne down to Fulham in his gig, and left him there tete-a-tete with
+Osborne down to Fulham in his gig, and left him there \foreign{t\^ete-\`a-t\^ete} with
 Miss Amelia.
 
 ``My wife will be very happy to see her ladyship,'' Sedley replied,
@@ -9159,7 +9171,7 @@ down, and the people as they clinked by in pattens, left long
 reflections on the shining stone: he tattooed at the table: he bit his
 nails most completely, and nearly to the quick (he was accustomed to
 ornament his great big hands in this way): he balanced the tea-spoon
-dexterously on the milk jug: upset it, \&c., \&c.; and in fact showed
+dexterously on the milk jug: upset it, \foreign{\&c.}, \foreign{\&c.}; and in fact showed
 those signs of disquietude, and practised those desperate attempts at
 amusement, which men are accustomed to employ when very anxious, and
 expectant, and perturbed in mind.
@@ -9316,7 +9328,7 @@ pretty sure to be pacing the cliff; or again it is a City man, with a
 nautical turn, and a telescope, the size of a six-pounder, who has his
 instrument pointed seawards, so as to command every pleasure-boat,
 herring-boat, or bathing-machine that comes to, or quits, the shore,
-\&c., \&c.  But have we any leisure for a description of Brighton?---for
+\foreign{\&c.}, \foreign{\&c.}  But have we any leisure for a description of Brighton?---for
 Brighton, a clean Naples with genteel lazzaroni---for Brighton, that
 always looks brisk, gay, and gaudy, like a harlequin's jacket---for
 Brighton, which used to be seven hours distant from London at the time
@@ -9603,7 +9615,7 @@ Osborne.''  The young lady thought the actual moment had arrived, and
 that Dobbin's nervousness which now came on and was visible in many
 twitchings of his face, in his manner of beating the ground with his
 great feet, in the rapid buttoning and unbuttoning of his frock-coat,
-\&c.---Miss Osborne, I say, thought that when he had given himself a
+\foreign{\&c.}---Miss Osborne, I say, thought that when he had given himself a
 little air, he would unbosom himself entirely, and prepared eagerly to
 listen.  And the clock, in the altar on which Iphigenia was situated,
 beginning, after a preparatory convulsion, to toll twelve, the mere
@@ -10038,7 +10050,7 @@ papers he came on that name. They were all marked and docketed, and
 tied with red tape. It was---``From Georgy, requesting 5s., April 23,
 18---; answered, April 25''---or ``Georgy about a pony, October 13''---and so
 forth. In another packet were ``Dr.\ S.'s accounts''---``G.'s tailor's bills
-and outfits, drafts on me by G. Osborne, jun.,'' \&c.---his letters from
+and outfits, drafts on me by G. Osborne, jun.,'' \foreign{\&c.}---his letters from
 the West Indies---his agent's letters, and the newspapers containing his
 commissions: here was a whip he had when a boy, and in a paper a locket
 containing his hair, which his mother used to wear.
@@ -11928,7 +11940,7 @@ all said, they found themselves in one of the gayest and most brilliant
 little capitals in Europe, and where all the Vanity Fair booths were
 laid out with the most tempting liveliness and splendour.  Gambling was
 here in profusion, and dancing in plenty:  feasting was there to fill
-with delight that great gourmand of a Jos:  there was a theatre where a
+with delight that great \foreign{gourmand} of a Jos:  there was a theatre where a
 miraculous Catalani was delighting all hearers:  beautiful rides, all
 enlivened with martial splendour; a rare old city, with strange
 costumes and wonderful architecture, to delight the eyes of little
@@ -12232,7 +12244,7 @@ General, with the orders in his button, stared at the newcomer with a
 sulky scowl, as much as to say, who the devil are you?
 
 ``My dear Captain George!'' cried little Rebecca in an ecstasy.  ``How
-good of you to come.  The General and I were moping together tete-a-tete.
+good of you to come.  The General and I were moping together \foreign{t\^ete-\`a-t\^ete}.
 General, this is my Captain George of whom you heard me talk.''
 
 ``Indeed,'' said the General, with a very small bow; ``of what regiment is
@@ -13262,7 +13274,7 @@ I've seen a little service in India, but nothing on this grand scale.''
 ``Captain Crawley left me this morning as gay as if he were going to a
 hunting party.  What does he care?  What do any of you care for the
 agonies and tortures of a poor forsaken woman?  (I wonder whether he
-could really have been going to the troops, this great lazy gourmand?)
+could really have been going to the troops, this great lazy \foreign{gourmand?})
 Oh!  dear Mr.\ Sedley, I have come to you for comfort---for consolation.
 I have been on my knees all the morning. I tremble at the frightful
 danger into which our husbands, our friends, our brave troops and
@@ -13784,7 +13796,7 @@ This curt reply brought the Earl in person to Becky's apartment; but he
 could get no more success than the first ambassador.  ``Send a lady's
 maid to ME!'' Mrs.\ Crawley cried in great anger; ``why didn't my Lady
 Bareacres tell me to go and saddle the horses!  Is it her Ladyship that
-wants to escape, or her Ladyship's femme de chambre?'' And this was all
+wants to escape, or her Ladyship's \foreign{femme de chambre?}'' And this was all
 the answer that the Earl bore back to his Countess.
 
 What will not necessity do?  The Countess herself actually came to wait
@@ -14332,7 +14344,7 @@ favour.
 that I was coming, as I did, in that foolish letter when we sent Miss
 Crawley the guinea-fowls. I ought to have gone without a word to the
 poor dear doting old creature, and taken her out of the hands of that
-ninny Briggs, and that harpy of a femme de chambre.  Oh! Bute, Bute,
+ninny Briggs, and that harpy of a \foreign{femme de chambre.}  Oh! Bute, Bute,
 why did you break your collar-bone?''
 
 Why, indeed?  We have seen how Mrs.\ Bute, having the game in her hands,
@@ -14421,7 +14433,7 @@ believe, we owe that beautiful poem.
   Lead us to some sunny isle,
   Yonder in the western deep;
   Where the skies for ever smile,
-  And the blacks for ever weep, \&c.
+  And the blacks for ever weep, \foreign{\&c.}
 
 She had correspondences with clerical gentlemen in most of our East and
 West India possessions; and was secretly attached to the Reverend Silas
@@ -14665,7 +14677,7 @@ neglect, he might have risen to a high rank in his profession. When the
 Countess Dowager of Southdown fell foul of the Corsican upstart, as the
 fashion was in those days, and showed that he was a monster stained
 with every conceivable crime, a coward and a tyrant not fit to live,
-one whose fall was predicted, \&c., Pitt Crawley suddenly took up the
+one whose fall was predicted, \foreign{\&c.}, Pitt Crawley suddenly took up the
 cudgels in favour of the man of Destiny.  He described the First Consul
 as he saw him at Paris at the peace of Amiens; when he, Pitt Crawley,
 had the gratification of making the acquaintance of the great and good
@@ -15930,7 +15942,7 @@ into zero.  ``Gambling,'' she would say, ``dear, is good to help your
 income, but not as an income itself.  Some day people may be tired of
 play, and then where are we?'' Rawdon acquiesced in the justice of her
 opinion; and in truth he had remarked that after a few nights of his
-little suppers, \&c., gentlemen were tired of play with him, and, in
+little suppers, \foreign{\&c.}, gentlemen were tired of play with him, and, in
 spite of Rebecca's charms, did not present themselves very eagerly.
 
 Easy and pleasant as their life at Paris was, it was after all only an
@@ -16042,9 +16054,9 @@ the lusty and healthy little Rawdon.  No, not even the nurse was
 paid---the Crawleys were in too great a hurry to remember their trifling
 debt to her.  As for the landlord of the hotel, his curses against the
 English nation were violent for the rest of his natural life.  He asked
-all travellers whether they knew a certain Colonel Lor Crawley---avec sa
-femme une petite dame, tres spirituelle.  ``Ah, Monsieur!'' he would
-add---``ils m'ont affreusement vole.'' It was melancholy to hear his
+all travellers whether they knew a certain Colonel Lor Crawley---\foreign{avec sa
+femme une petite dame, tr\`es spirituelle.}  ``\foreign{Ah, Monsieur!}'' he would
+add---``\foreign{ils m'ont affreusement vol\'e.}'' It was melancholy to hear his
 accents as he spoke of that catastrophe.
 
 Rebecca's object in her journey to London was to effect a kind of
@@ -16746,7 +16758,7 @@ yearly to his parents at Fulham.  It was the chief support of the old
 couple; for Mr.\ Sedley's speculations in life subsequent to his
 bankruptcy did not by any means retrieve the broken old gentleman's
 fortune.  He tried to be a wine-merchant, a coal-merchant, a commission
-lottery agent, \&c., \&c.  He sent round prospectuses to his friends
+lottery agent, \foreign{\&c.}, \foreign{\&c.}  He sent round prospectuses to his friends
 whenever he took a new trade, and ordered a new brass plate for the
 door, and talked pompously about making his fortune still.  But Fortune
 never came back to the feeble and stricken old man.  One by one his
@@ -17503,7 +17515,7 @@ him out of the keys.  And it is a fact, that some time after she left
 Queen's Crawley a copy-book belonging to this lady was discovered,
 which showed that she had taken great pains in private to learn the art
 of writing in general, and especially of writing her own name as Lady
-Crawley, Lady Betsy Horrocks, Lady Elizabeth Crawley, \&c.
+Crawley, Lady Betsy Horrocks, Lady Elizabeth Crawley, \foreign{\&c.}
 
 Though the good people of the Parsonage never went to the Hall and
 shunned the horrid old dotard its owner, yet they kept a strict
@@ -17688,7 +17700,7 @@ Jane yielded up everything, however, to her mother.  She was only fond
 of her children in private, and it was lucky for her that Lady
 Southdown's multifarious business, her conferences with ministers, and
 her correspondence with all the missionaries of Africa, Asia, and
-Australasia, \&c., occupied the venerable Countess a great deal, so that
+Australasia, \foreign{\&c.}, occupied the venerable Countess a great deal, so that
 she had but little time to devote to her granddaughter, the little
 Matilda, and her grandson, Master Pitt Crawley. The latter was a feeble
 child, and it was only by prodigious quantities of calomel that Lady
@@ -17816,7 +17828,7 @@ take this---this decisive step, my love; for, as you must perceive, it
 is impossible that there should be two chiefs in a family: and now, if
 you please, we will resume the dictation.  `My dear brother, the
 melancholy intelligence which it is my duty to convey to my family must
-have been long anticipated by,'\,'' \&c.
+have been long anticipated by,'\,'' \foreign{\&c.}
 
 In a word, Pitt having come to his kingdom, and having by good luck, or
 desert rather, as he considered, assumed almost all the fortune which
@@ -17949,7 +17961,7 @@ a great portion of her private savings out of her, and finally she fled
 to London followed by the anathemas of both, and determined to seek for
 servitude again as infinitely less onerous than liberty.  And
 advertising in the papers that a ``Gentlewoman of agreeable manners, and
-accustomed to the best society, was anxious to,'' \&c., she took up her
+accustomed to the best society, was anxious to,'' \foreign{\&c.}, she took up her
 residence with Mr.\ Bowls in Half Moon Street, and waited the result of
 the advertisement.
 
@@ -18359,7 +18371,7 @@ obsequious and respectful to the head of his house, and despised the
 milksop Pitt no longer.  Rawdon listened with sympathy to his senior's
 prospects of planting and draining, gave his advice about the stables
 and cattle, rode over to Mudbury to look at a mare, which he thought
-would carry Lady Jane, and offered to break her, \&c.:  the rebellious
+would carry Lady Jane, and offered to break her, \foreign{\&c.}:  the rebellious
 dragoon was quite humbled and subdued, and became a most creditable
 younger brother.  He had constant bulletins from Miss Briggs in London
 respecting little Rawdon, who was left behind there, who sent messages
@@ -20254,7 +20266,7 @@ from those doors as much as the laced lacqueys and link-boys of old
 times, who used to put out their torches in the blank iron
 extinguishers that still flank the lamps over the steps. Brass plates
 have penetrated into the square---Doctors, the Diddlesex Bank Western
-Branch---the English and European Reunion, \&c.---it has a dreary
+Branch---the English and European Reunion, \foreign{\&c.}---it has a dreary
 look---nor is my Lord Steyne's palace less dreary.  All I have ever seen
 of it is the vast wall in front, with the rustic columns at the great
 gate, through which an old porter peers sometimes with a fat and gloomy
@@ -20617,7 +20629,7 @@ and shouting mass there of his people who were, and indeed showed
 themselves almost to be, ready to die for him.  Yes, we saw him.  Fate
 cannot deprive us of THAT.  Others have seen Napoleon.  Some few still
 exist who have beheld Frederick the Great, Doctor Johnson, Marie
-Antoinette, \&c.---be it our reasonable boast to our children, that we
+Antoinette, \foreign{\&c.}---be it our reasonable boast to our children, that we
 saw George the Good, the Magnificent, the Great.
 
 Well, there came a happy day in Mrs.\ Rawdon Crawley's existence when
@@ -20929,8 +20941,8 @@ Macbeth, and my daughters as cheerful as Regan and Goneril.  I daren't
 sleep in what they call my bedroom. The bed is like the baldaquin of
 St.\ Peter's, and the pictures frighten me.  I have a little brass bed
 in a dressing-room, and a little hair mattress like an anchorite. I am
-an anchorite. Ho!  ho!  You'll be asked to dinner next week.  And gare
-aux femmes, look out and hold your own!  How the women will bully you!''
+an anchorite. Ho!  ho!  You'll be asked to dinner next week.  And \foreign{gare
+aux femmes}, look out and hold your own!  How the women will bully you!''
 This was a very long speech for a man of few words like my Lord Steyne;
 nor was it the first which he uttered for Becky's benefit on that day.
 
@@ -20943,7 +20955,7 @@ with a savage look over his shoulder at her, ``I will have her poisoned.''
 
 ``I always give my dog dinner from my own plate,'' said Rebecca, laughing
 mischievously; and having enjoyed for some time the discomfiture of my
-lord, who hated poor Briggs for interrupting his tete-a-tete with the
+lord, who hated poor Briggs for interrupting his \foreign{t\^ete-\`a-t\^ete} with the
 fair Colonel's wife, Mrs.\ Rawdon at length had pity upon her admirer,
 and calling to Briggs, praised the fineness of the weather to her and
 bade her to take out the child for a walk.
@@ -21918,13 +21930,13 @@ dinner at their house in May Fair.  Their Excellencies the Prince and
 Princess of Peterwaradin, H. E. Papoosh Pasha, the Turkish Ambassador
 (attended by Kibob Bey, dragoman of the mission), the Marquess of
 Steyne, Earl of Southdown, Sir Pitt and Lady Jane Crawley, Mr.\ Wagg,
-\&c.  After dinner Mrs.\ Crawley had an assembly which was attended by
+\foreign{\&c.}  After dinner Mrs.\ Crawley had an assembly which was attended by
 the Duchess (Dowager) of Stilton, Duc de la Gruyere, Marchioness of
 Cheshire, Marchese Alessandro Strachino, Comte de Brie, Baron
 Schapzuger, Chevalier Tosti, Countess of Slingstone, and Lady F.
 Macadam, Major-General and Lady G. Macbeth, and (2) Miss Macbeths;
 Viscount Paddington, Sir Horace Fogey, Hon.  Sands Bedwin, Bobachy
-Bahawder,'' and an \&c., which the reader may fill at his pleasure
+Bahawder,'' and an \foreign{\&c.}, which the reader may fill at his pleasure
 through a dozen close lines of small type.
 
 And in her commerce with the great our dear friend showed the same
@@ -24580,7 +24592,7 @@ when they were ill, her footman, in large plush smalls and waistcoat,
 brought jellies and delicacies from Russell Square to Coram Street.
 Coram Street trembled and looked up to Russell Square indeed, and Mrs.\ %
 Todd, who had a pretty hand at cutting out paper trimmings for haunches
-of mutton, and could make flowers, ducks, \&c., out of turnips and
+of mutton, and could make flowers, ducks, \foreign{\&c.}, out of turnips and
 carrots in a very creditable manner, would go to ``the Square,'' as it
 was called, and assist in the preparations incident to a great dinner,
 without even so much as thinking of sitting down to the banquet.  If
@@ -25541,7 +25553,7 @@ documents relative to the wine project (which failed from a most
 unaccountable accident, after commencing with the most splendid
 prospects), the coal project (which only a want of capital prevented
 from becoming the most successful scheme ever put before the public),
-the patent saw-mills and sawdust consolidation project, \&c., \&c.  All
+the patent saw-mills and sawdust consolidation project, \foreign{\&c.}, \foreign{\&c.}  All
 night, until a very late hour, he passed in the preparation of these
 documents, trembling about from one room to another, with a quivering
 candle and shaky hands.  Here's the wine papers, here's the sawdust,
@@ -26134,7 +26146,7 @@ the laymen whose fate it sometimes is to sit by and listen.
 Before long Emmy had a visiting-book, and was driving about regularly
 in a carriage, calling upon Lady Bludyer (wife of Major-General Sir
 Roger Bludyer, K.C.B., Bengal Army); Lady Huff, wife of Sir G.  Huff,
-Bombay ditto; Mrs.\ Pice, the Lady of Pice the Director, \&c.  We are not
+Bombay ditto; Mrs.\ Pice, the Lady of Pice the Director, \foreign{\&c.}  We are not
 long in using ourselves to changes in life.  That carriage came round
 to Gillespie Street every day; that buttony boy sprang up and down from
 the box with Emmy's and Jos's visiting-cards; at stated hours Emmy and
@@ -26156,7 +26168,7 @@ admired Mrs.\ Osborne, liked to bow to her carriage in the park, and to
 be admitted to have the honour of paying her a morning visit.  Swankey
 of the Body Guard himself, that dangerous youth, and the greatest buck
 of all the Indian army now on leave, was one day discovered by Major
-Dobbin tete-a-tete with Amelia, and describing the sport of
+Dobbin \foreign{t\^ete-\`a-t\^ete} with Amelia, and describing the sport of
 pig-sticking to her with great humour and eloquence; and he spoke
 afterwards of a d---d king's officer that's always hanging about the
 house---a long, thin, queer-looking, oldish fellow---a dry fellow though,
@@ -26230,7 +26242,7 @@ the last time there, my friend in motley.  The nurse will look in at
 the curtains, and you take no notice---and then she will fling open the
 windows for a little and let in the air.  Then they will pull down all
 the front blinds of the house and live in the back rooms---then they
-will send for the lawyer and other men in black, \&c.  Your comedy and
+will send for the lawyer and other men in black, \foreign{\&c.}  Your comedy and
 mine will have been played then, and we shall be removed, oh, how far,
 from the trumpets, and the shouting, and the posture-making.  If we
 are gentlefolks they will put hatchments over our late domicile, with
@@ -26795,7 +26807,7 @@ locomotion.  These consisted of a few magnificently attired gentlemen
 from Houndsditch, who brought their own provisions, and could have
 bought half the gay people in the grand saloon; a few honest fellows
 with mustachios and portfolios, who set to sketching before they had
-been half an hour on board; one or two French femmes de chambre who
+been half an hour on board; one or two French \foreign{femmes de chambre} who
 began to be dreadfully ill by the time the boat had passed Greenwich; a
 groom or two who lounged in the neighbourhood of the horse-boxes under
 their charge, or leaned over the side by the paddle-wheels, and talked
@@ -27494,7 +27506,7 @@ The great Saint Michael's Fountain ran with uncommonly sour wine, while
 that in the Artillery Place frothed with beer.  The great waters
 played; and poles were put up in the park and gardens for the happy
 peasantry, which they might climb at their leisure, carrying off
-watches, silver forks, prize sausages hung with pink ribbon, \&c., at
+watches, silver forks, prize sausages hung with pink ribbon, \foreign{\&c.}, at
 the top.  Georgy got one, wrenching it off, having swarmed up the pole
 to the delight of the spectators, and sliding down with the rapidity of
 a fall of water.  But it was for the glory's sake merely.  The boy gave
@@ -27791,7 +27803,7 @@ matters.
 Our darling Becky's first flight was not very far.  She perched upon
 the French coast at Boulogne, that refuge of so much exiled English
 innocence, and there lived in rather a genteel, widowed manner, with a
-femme de chambre and a couple of rooms, at an hotel.  She dined at the
+\foreign{femme de chambre} and a couple of rooms, at an hotel.  She dined at the
 table d'hote, where people thought her very pleasant, and where she
 entertained her neighbours by stories of her brother, Sir Pitt, and her
 great London acquaintance, talking that easy, fashionable slip-slop
@@ -28295,7 +28307,7 @@ his heart---that heart which always beat with every generous and noble
 emotion was brought back to Castle Gaunt in a silver urn.  ``In him,''
 Mr.\ Wagg said, ``the poor and the Fine Arts have lost a beneficent
 patron, society one of its most brilliant ornaments, and England one of
-her loftiest patriots and statesmen,'' \&c., \&c.
+her loftiest patriots and statesmen,'' \foreign{\&c.}, \foreign{\&c.}
 
 His will was a good deal disputed, and an attempt was made to force
 from Madame de Belladonna the celebrated jewel called the ``Jew's-eye''
@@ -28304,7 +28316,7 @@ was said that she removed from it after his lamented demise. But his
 confidential friend and attendant, Monsieur Fiche proved that the ring
 had been presented to the said Madame de Belladonna two days before the
 Marquis's death, as were the bank-notes, jewels, Neapolitan and French
-bonds, \&c., found in his lordship's secretaire and claimed by his heirs
+bonds, \foreign{\&c.}, found in his lordship's secretaire and claimed by his heirs
 from that injured woman.
 
 
@@ -29393,7 +29405,7 @@ Major Dobbin sent about his business, and made no scruple of declaring
 her admiration for that excellent, high-minded gentleman, and of
 telling Emmy that she had behaved most cruelly regarding him. Emmy
 defended her conduct and showed that it was dictated only by the purest
-religious principles; that a woman once, \&c., and to such an angel as
+religious principles; that a woman once, \foreign{\&c.}, and to such an angel as
 him whom she had had the good fortune to marry, was married forever;
 but she had no objection to hear the Major praised as much as ever
 Becky chose to praise him, and indeed, brought the conversation round
@@ -29522,7 +29534,7 @@ think---why look back!  It is too late now!''
 
 That evening's conversation was delicious for Jos. Emmy only came in to
 go to bed very tired and unwell. Jos and his fair guest had a charming
-tete-a-tete, and his sister could hear, as she lay awake in her
+\foreign{t\^ete-\`a-t\^ete}, and his sister could hear, as she lay awake in her
 adjoining chamber, Rebecca singing over to Jos the old songs of 1815.
 He did not sleep, for a wonder, that night, any more than Amelia.
 
@@ -29987,7 +29999,7 @@ He never saw Jos more.  Three months afterwards Joseph Sedley died at
 away in speculations, and was represented by valueless shares in
 different bubble companies.  All his available assets were the two
 thousand pounds for which his life was insured, and which were left
-equally between his beloved ``sister Amelia, wife of, \&c., and his
+equally between his beloved ``sister Amelia, wife of, \foreign{\&c.}, and his
 friend and invaluable attendant during sickness, Rebecca, wife of
 Lieutenant-Colonel Rawdon Crawley, C.B.,'' who was appointed
 administratrix.
