@@ -9,6 +9,7 @@
 % - next Chapter to carefully compare: XI
 % - spacing after quotations, as in ``blah blah!'' said Jos --- this puts too much space before ``said'' needs \ .
 % - find quoted correspondence and notes and set them properly with margins.
+% - check that all letters and P.\,S. and so on are similarly formatted.
 % - almost all italics from my edition have been eradicated here... fix these?
 % - almost all foreign punctuation from my edition has been eradicated here... fix these!
 % - develop a policy about what foreign words get \foreign{} -- eg, place names?
@@ -18,11 +19,11 @@
 
 % style notes:
 % ------------
-% - missing letters, as in ``D---------'': use 9 ``-'' characters
+% - missing words or large sets of letters, as in ``D------'': use 6 ``-'' characters; for just one or two use ``---''
 % - \emph for emphasis, \textit for book titles, \foreign for french and latin
 % - (need a policy about punctuation at the end of emph, textit, and foreign)
 % - use quotation environment and \thematicbreak command (below)
-% - use \, between initials? As in P.\,S.
+% - use \, between non-name (ie abbreviation) initials? As in P.\,S.
 
 \documentclass[10pt, a5paper]{book}
 \usepackage{fancyhdr, textgreek}
@@ -363,6 +364,8 @@ has the honour to subscribe herself,
 \longindent Your most obliged humble servant,
 
 \longindent Barbara Pinkerton
+
+~
 
 \noindent
 P.\,S.---Miss Sharp accompanies Miss Sedley.  It is particularly requested
@@ -992,7 +995,7 @@ for you a very beautiful pair of braces.''
 mean?''\ and plunging with all his might at the bell-rope, that article
 of furniture came away in his hand, and increased the honest fellow's
 confusion.  ``For heaven's sake see if my buggy's at the door.  I \emph{can't}
-wait.  I must go.  D--------- that groom of mine. I must go.''
+wait.  I must go.  D------ that groom of mine. I must go.''
 
 At this minute the father of the family walked in, rattling his seals
 like a true British merchant.  ``What's the matter, Emmy?'' says he.
@@ -1405,7 +1408,7 @@ water in his face, Miss Sharp, or carry him upstairs: the dear
 creature's fainting.  Poor victim! carry him up; he's as light as a
 feather!''
 
-``If I stand this, sir, I'm d---------!''\ roared Joseph.
+``If I stand this, sir, I'm d------!''\ roared Joseph.
 
 ``Order Mr.\ Jos's elephant, Sambo!''\ cried the father. ``Send to Exeter
 'Change, Sambo''; but seeing Jos ready almost to cry with vexation, the
@@ -2138,6 +2141,8 @@ bay mare.  I wish my Papa would let me have a Pony, and I am
 \longindent Your dutiful Son,
 
 \longindent George Sedley Osborne
+
+~
 
 \noindent
 P.\,S.---Give my love to little Emmy.  I am cutting her out a Coach in
@@ -4145,7 +4150,7 @@ Lieut.-Colonel Hector McTavish, and she and her mother played for Bute
 and won him at Harrowgate), she had been a prudent and thrifty wife to
 him.  In spite of her care, however, he was always in debt.  It took
 him at least ten years to pay off his college bills contracted during
-his father's lifetime. In the year 179-, when he was just clear of
+his father's lifetime. In the year 179---, when he was just clear of
 these incumbrances, he gave the odds of 100 to 1 (in twenties) against
 Kangaroo, who won the Derby.  The Rector was obliged to take up the
 money at a ruinous interest, and had been struggling ever since.  His
@@ -4208,54 +4213,72 @@ Hall were the great food for conversation at the Rectory, and Mrs.\ %
 Bute's bright eyes spied out everything that took place in the enemy's
 camp---everything and a great deal besides.
 
+\begin{quotation}
+\longindent Mrs.\ Bute Crawley to Miss Pinkerton,
 
-Mrs.\ Bute Crawley to Miss Pinkerton, The Mall, Chiswick.
+\longindent The Mall, Chiswick.
 
-Rectory, Queen's Crawley, December---.
+~
 
-My Dear Madam,---Although it is so many years since I profited by your
-delightful and invaluable instructions, yet I have ever retained the
-FONDEST and most reverential regard for Miss Pinkerton, and DEAR
-Chiswick.  I hope your health is GOOD.  The world and the cause of
-education cannot afford to lose Miss Pinkerton for MANY MANY YEARS.
+\longindent Rectory, Queen's Crawley, December---.
+
+\noindent My Dear Madam,
+
+Although it is so \emph{many} years since I profited by your
+\emph{delightful} and \emph{invaluable} instructions, yet I have ever retained the
+\emph{fondest} and \emph{most reverential} regard for Miss Pinkerton, and \emph{dear}
+Chiswick.  I hope your health is \emph{good.}  The world and \emph{the cause of
+education} cannot afford to lose Miss Pinkerton for \emph{many many years.}
 When my friend, Lady Fuddleston, mentioned that her dear girls required
-an instructress (I am too poor to engage a governess for mine, but was
+an instructress (I am \emph{too poor} to engage a governess for mine, but was
 I not educated at Chiswick?)---``Who,'' I exclaimed, ``can we consult but
 the excellent, the incomparable Miss Pinkerton?'' In a word, have you,
 dear madam, any ladies on your list, whose services might be made
 available to my kind friend and neighbour? I assure you she will take
-no governess BUT OF YOUR CHOOSING.
+no governess \emph{but of your choosing.}
 
-My dear husband is pleased to say that he likes EVERYTHING WHICH COMES
-FROM MISS PINKERTON'S SCHOOL.  How I wish I could present him and my
+My dear husband is pleased to say that he likes \emph{everything which comes
+from Miss Pinkerton's school.}  How I wish I could present him and my
 beloved girls to the friend of my youth, and the ADMIRED of the great
 lexicographer of our country! If you ever travel into Hampshire, Mr.\ %
 Crawley begs me to say, he hopes you will adorn our RURAL RECTORY with
 your presence.  'Tis the humble but happy home of
 
-Your affectionate Martha Crawley
+\longindent Your affectionate
 
+\longindent Martha Crawley
+
+~
+
+\noindent
 P.\,S.  Mr.\ Crawley's brother, the baronet, with whom we are not, alas!\ %
-upon those terms of UNITY in which it BECOMES BRETHREN TO DWELL, has a
+upon those terms of \emph{unity} in which it \emph{becomes brethren to dwell,} has a
 governess for his little girls, who, I am told, had the good fortune to
 be educated at Chiswick.  I hear various reports of her; and as I have
 the tenderest interest in my dearest little nieces, whom I wish, in
 spite of family differences, to see among my own children---and as I
-long to be attentive to ANY PUPIL OF YOURS---do, my dear Miss Pinkerton,
-tell me the history of this young lady, whom, for YOUR SAKE, I am most
-anxious to befriend.---M. C.
+long to be attentive to \emph{any pupil of yours}---do, my dear Miss Pinkerton,
+tell me the \emph{history} of this young lady, whom, for \emph{your sake,} I am most
+anxious to befriend.
 
+\longindent ---M.~C.
+\end{quotation}
 
-Miss Pinkerton to Mrs.\ Bute Crawley.
+\begin{quotation}
+\longindent Miss Pinkerton to Mrs.\ Bute Crawley.
 
-Johnson House, Chiswick, Dec. 18---.
+~
 
-Dear Madam,---I have the honour to acknowledge your polite
+\longindent Johnson House, Chiswick, Dec. 18---.
+
+\noindent Dear Madam,
+
+I have the honour to acknowledge your polite
 communication, to which I promptly reply. 'Tis most gratifying to one
 in my most arduous position to find that my maternal cares have
 elicited a responsive affection; and to recognize in the amiable Mrs.\ %
-Bute Crawley my excellent pupil of former years, the sprightly and
-accomplished Miss Martha MacTavish.  I am happy to have under my charge
+Bute Crawley my excellent pupil of former years, the \emph{sprightly and
+accomplished} Miss Martha MacTavish.  I am happy to have under my charge
 now the daughters of many of those who were your contemporaries at my
 establishment---what pleasure it would give me if your own beloved young
 ladies had need of my instructive superintendence!
@@ -4264,7 +4287,7 @@ Presenting my respectful compliments to Lady Fuddleston, I have the
 honour (epistolarily) to introduce to her ladyship my two friends, Miss
 Tuffin and Miss Hawky.
 
-Either of these young ladies is PERFECTLY QUALIFIED to instruct in
+Either of these young ladies is \emph{perfectly qualified} to instruct in
 Greek, Latin, and the rudiments of Hebrew; in mathematics and history;
 in Spanish, French, Italian, and geography; in music, vocal and
 instrumental; in dancing, without the aid of a master; and in the
@@ -4279,64 +4302,72 @@ objectionable in Sir Huddleston Fuddleston's family.
 Miss Letitia Hawky, on the other hand, is not personally well-favoured.
 She is twenty-nine; her face is much pitted with the small-pox.  She
 has a halt in her gait, red hair, and a trifling obliquity of vision.
-Both ladies are endowed with EVERY MORAL AND RELIGIOUS VIRTUE.  Their
+Both ladies are endowed with \emph{every moral and religious virtue.}  Their
 terms, of course, are such as their accomplishments merit.  With my
 most grateful respects to the Reverend Bute Crawley, I have the honour
 to be,
 
-Dear Madam,
+\longindent Dear Madam,
 
-Your most faithful and obedient servant, Barbara Pinkerton.
+\longindent Your most faithful and obedient servant,
 
+\longindent  Barbara Pinkerton.
+
+~
+
+\noindent
 P.\,S.  The Miss Sharp, whom you mention as governess to Sir Pitt
 Crawley, Bart., M.\,P., was a pupil of mine, and I have nothing to say in
 her disfavour. Though her appearance is disagreeable, we cannot control
 the operations of nature: and though her parents were disreputable (her
 father being a painter, several times bankrupt, and her mother, as I
 have since learned, with horror, a dancer at the Opera); yet her
-talents are considerable, and I cannot regret that I received her OUT
-OF CHARITY.  My dread is, lest the principles of the mother---who was
+talents are considerable, and I cannot regret that I received her \emph{out
+of charity.}  My dread is, lest the principles of the mother---who was
 represented to me as a French Countess, forced to emigrate in the late
 revolutionary horrors; but who, as I have since found, was a person of
-the very lowest order and morals---should at any time prove to be
-HEREDITARY in the unhappy young woman whom I took as AN OUTCAST.  But
-her principles have hitherto been correct (I believe), and I am sure
+the \emph{very lowest order and morals}---should at any time prove to be
+\emph{hereditary} in the unhappy young woman whom i took as \emph{an outcast.}  But
+her principles have \emph{hitherto} been correct (i believe), and i am sure
 nothing will occur to injure them in the elegant and refined circle of
-the eminent Sir Pitt Crawley.
+the eminent sir pitt crawley.
+\end{quotation}
 
+\begin{quotation}
+\longindent miss rebecca sharp to miss amelia sedley.
 
-Miss Rebecca Sharp to Miss Amelia Sedley.
+~
 
-I have not written to my beloved Amelia for these many weeks past, for
-what news was there to tell of the sayings and doings at Humdrum Hall,
-as I have christened it; and what do you care whether the turnip crop
+i have not written to my beloved amelia for these many weeks past, for
+what news was there to tell of the sayings and doings at humdrum hall,
+as i have christened it; and what do you care whether the turnip crop
 is good or bad; whether the fat pig weighed thirteen stone or fourteen;
-and whether the beasts thrive well upon mangelwurzel? Every day since I
-last wrote has been like its neighbour.  Before breakfast, a walk with
-Sir Pitt and his spud; after breakfast studies (such as they are) in
+and whether the beasts thrive well upon mangelwurzel? every day since i
+last wrote has been like its neighbour.  before breakfast, a walk with
+sir pitt and his spud; after breakfast studies (such as they are) in
 the schoolroom; after schoolroom, reading and writing about lawyers,
-leases, coal-mines, canals, with Sir Pitt (whose secretary I am
-become); after dinner, Mr.\ Crawley's discourses on the baronet's
+leases, coal-mines, canals, with sir pitt (whose secretary i am
+become); after dinner, mr.\ crawley's discourses on the baronet's
 backgammon; during both of which amusements my lady looks on with equal
-placidity.  She has become rather more interesting by being ailing of
-late, which has brought a new visitor to the Hall, in the person of a
-young doctor. Well, my dear, young women need never despair.  The young
+placidity.  she has become rather more interesting by being ailing of
+late, which has brought a new visitor to the hall, in the person of a
+young doctor. well, my dear, young women need never despair.  the young
 doctor gave a certain friend of yours to understand that, if she chose
-to be Mrs.\ Glauber, she was welcome to ornament the surgery! I told his
+to be mrs.\ glauber, she was welcome to ornament the surgery! i told his
 impudence that the gilt pestle and mortar was quite ornament enough; as
-if I was born, indeed, to be a country surgeon's wife! Mr.\ Glauber went
+if i was born, indeed, to be a country surgeon's wife! mr.\ glauber went
 home seriously indisposed at his rebuff, took a cooling draught, and is
-now quite cured.  Sir Pitt applauded my resolution highly; he would be
-sorry to lose his little secretary, I think; and I believe the old
-wretch likes me as much as it is in his nature to like any one.  Marry,
-indeed! and with a country apothecary, after---  No, no, one cannot so
-soon forget old associations, about which I will talk no more.  Let us
-return to Humdrum Hall.
+now quite cured.  sir pitt applauded my resolution highly; he would be
+sorry to lose his little secretary, i think; and i believe the old
+wretch likes me as much as it is in his nature to like any one.  marry,
+indeed! and with a country apothecary, after---  no, no, one cannot so
+soon forget old associations, about which i will talk no more.  let us
+return to humdrum hall.
 
-For some time past it is Humdrum Hall no longer. My dear, Miss Crawley
+for some time past it is humdrum hall no longer. my dear, miss crawley
 has arrived with her fat horses, fat servants, fat spaniel---the great
-rich Miss Crawley, with seventy thousand pounds in the five per cents.,
-whom, or I had better say WHICH, her two brothers adore.  She looks
+rich miss crawley, with seventy thousand pounds in the five per cents.,
+whom, or i had better say \emph{which,} her two brothers adore.  She looks
 very apoplectic, the dear soul; no wonder her brothers are anxious
 about her.  You should see them struggling to settle her cushions, or
 to hand her coffee! ``When I come into the country,'' she says (for she
@@ -4365,12 +4396,12 @@ is!
 
 Another admirable effect of Miss Crawley and her seventy thousand
 pounds is to be seen in the conduct of the two brothers Crawley.  I
-mean the baronet and the rector, not OUR brothers---but the former, who
+mean the baronet and the rector, not \emph{our} brothers---but the former, who
 hate each other all the year round, become quite loving at Christmas.
 I wrote to you last year how the abominable horse-racing rector was in
 the habit of preaching clumsy sermons at us at church, and how Sir Pitt
 snored in answer.  When Miss Crawley arrives there is no such thing as
-quarrelling heard of---the Hall visits the Rectory, and vice versa---the
+quarrelling heard of---the Hall visits the Rectory, and \foreign{vice versa}---the
 parson and the Baronet talk about the pigs and the poachers, and the
 county business, in the most affable manner, and without quarrelling in
 their cups, I believe---indeed Miss Crawley won't hear of their
@@ -4398,8 +4429,8 @@ wall---they beat them, ducked them, and were going to shoot them for
 poachers, but the baronet interfered.
 
 The Captain has a hearty contempt for his father, I can see, and calls
-him an old PUT, an old SNOB, an old CHAW-BACON, and numberless other
-pretty names.  He has a DREADFUL REPUTATION among the ladies. He brings
+him an old \emph{put,} an old \emph{snob,} an old \emph{chaw-bacon,} and numberless other
+pretty names.  he has a \emph{dreadful reputation} among the ladies. He brings
 his hunters home with him, lives with the Squires of the county, asks
 whom he pleases to dinner, and Sir Pitt dares not say no, for fear of
 offending Miss Crawley, and missing his legacy when she dies of her
@@ -4411,7 +4442,7 @@ Jove, she's a neat little filly!'' meaning your humble servant; and he
 did me the honour to dance two country-dances with me.  He gets on
 pretty gaily with the young Squires, with whom he drinks, bets, rides,
 and talks about hunting and shooting; but he says the country girls are
-BORES; indeed, I don't think he is far wrong. You should see the
+\emph{bores}; indeed, I don't think he is far wrong. You should see the
 contempt with which they look down on poor me! When they dance I sit
 and play the piano very demurely; but the other night, coming in rather
 flushed from the dining-room, and seeing me employed in this way, he
@@ -4442,16 +4473,21 @@ if I cared a fig about my pupils!
 
 Your India muslin and your pink silk, dearest Amelia, are said to
 become me very well.  They are a good deal worn now; but, you know, we
-poor girls can't afford des fraiches toilettes.  Happy, happy you! who
+poor girls can't afford \foreign{des fraiches toilettes.}  Happy, happy you! who
 have but to drive to St.\ James's Street, and a dear mother who will
 give you any thing you ask.  Farewell, dearest girl,
 
-Your affectionate Rebecca.
+\longindent Your affectionate
 
+\longindent Rebecca.
+
+~
+
+\noindent
 P.\,S.---I wish you could have seen the faces of the Miss Blackbrooks
 (Admiral Blackbrook's daughters, my dear), fine young ladies, with
 dresses from London, when Captain Rawdon selected poor me for a partner!
-
+\end{quotation}
 
 When Mrs.\ Bute Crawley (whose artifices our ingenious Rebecca had so
 soon discovered) had procured from Miss Sharp the promise of a visit,
@@ -4465,7 +4501,7 @@ the friendship of course lasted as long as the jovial old mediatrix was
 there to keep the peace.
 
 ``Why did you ask that scoundrel, Rawdon Crawley, to dine?''\ said the
-Rector to his lady, as they were walking home through the park.  ``I
+Rector to his lady, as they were walking home through the park.  ``\emph{I}
 don't want the fellow.  He looks down upon us country people as so many
 blackamoors. He's never content unless he gets my yellow-sealed wine,
 which costs me ten shillings a bottle, hang him! Besides, he's such an
@@ -4474,7 +4510,7 @@ in every way.  He shot a man in a duel---he's over head and ears in
 debt, and he's robbed me and mine of the best part of Miss Crawley's
 fortune.  Waxy says she has him''---here the Rector shook his fist at the
 moon, with something very like an oath, and added, in a melancholious
-tone, ``---down in her will for fifty thousand; and there won't be above
+tone, ``---down in her will for fifty thousand; and there won't be above % HOGG: this punctuation looks wrong
 thirty to divide.''
 
 ``I think she's going,'' said the Rector's wife.  ``She was very red in
@@ -4487,7 +4523,7 @@ us with---but you women never know what's what.''
 ``We know nothing,'' said Mrs.\ Bute Crawley.
 
 ``She drank cherry-brandy after dinner,'' continued his Reverence, ``and
-took curacao with her coffee.  I wouldn't take a glass for a five-pound
+took cura\c{c}ao with her coffee.  \emph{I} wouldn't take a glass for a five-pound
 note: it kills me with heartburn.  She can't stand it, Mrs.\ %
 Crawley---she must go---flesh and blood won't bear it! and I lay five to
 two, Matilda drops in a year.''
@@ -4517,7 +4553,7 @@ except hypocrisy, and that belongs to his brother.''
 ``Hush, my dearest love! we're in Sir Pitt's grounds,'' interposed his
 wife.
 
-``I say he has got every vice, Mrs.\ Crawley.  Don't Ma'am, bully me.
+``I say he \emph{has} got every vice, Mrs.\ Crawley.  Don't Ma'am, bully me.
 Didn't he shoot Captain Marker? Didn't he rob young Lord Dovedale at
 the Cocoa-Tree? Didn't he cross the fight between Bill Soames and the
 Cheshire Trump, by which I lost forty pound? You know he did; and as
@@ -4542,11 +4578,12 @@ Rawdon Crawley.''
 ``Mr.\ Crawley, you are intoxicated, as usual,'' replied his wife.  And
 the next morning, when the Rector woke, and called for small beer, she
 put him in mind of his promise to visit Sir Huddleston Fuddleston on
-Saturday, and as he knew he should have a wet night, it was agreed that
+Saturday, and as he knew he should have a \emph{wet night,} it was agreed that
 he might gallop back again in time for church on Sunday morning.  Thus
 it will be seen that the parishioners of Crawley were equally happy in
 their Squire and in their Rector.
 
+\thematicbreak
 Miss Crawley had not long been established at the Hall before Rebecca's
 fascinations had won the heart of that good-natured London rake, as
 they had of the country innocents whom we have been describing.  Taking
@@ -4579,12 +4616,12 @@ dinner; Sir Giles Wapshot had a particularly noisy manner of imbibing
 his soup, and her ladyship a wink of the left eye; all of which Becky
 caricatured to admiration; as well as the particulars of the night's
 conversation; the politics; the war; the quarter-sessions; the famous
-run with the H.H., and those heavy and dreary themes, about which
+run with the H.\,H., and those heavy and dreary themes, about which
 country gentlemen converse.  As for the Misses Wapshot's toilettes and
 Lady Fuddleston's famous yellow hat, Miss Sharp tore them to tatters,
 to the infinite amusement of her audience.
 
-``My dear, you are a perfect trouvaille,'' Miss Crawley would say.  ``I
+``My dear, you are a perfect \foreign{trouvaille,}'' Miss Crawley would say.  ``I
 wish you could come to me in London, but I couldn't make a butt of you
 as I do of poor Briggs no, no, you little sly creature; you are too
 clever---Isn't she, Firkin?''
@@ -4607,10 +4644,10 @@ Besides being such a fine religionist, Miss Crawley was, as we have
 said, an Ultra-liberal in opinions, and always took occasion to express
 these in the most candid manner.
 
-``What is birth, my dear!'' she would say to Rebecca---``Look at my brother
+``What is birth, my dear?''\ she would say to Rebecca---``Look at my brother
 Pitt; look at the Huddlestons, who have been here since Henry II; look
 at poor Bute at the parsonage---is any one of them equal to you in
-intelligence or breeding? Equal to you---they are not even equal to poor
+intelligence or breeding? Equal to \emph{you}---they are not even equal to poor
 dear Briggs, my companion, or Bowls, my butler. You, my love, are a
 little paragon---positively a little jewel---You have more brains than
 half the shire---if merit had its reward you ought to be a Duchess---no,
@@ -4632,13 +4669,13 @@ the sake of Mrs.\ Rougemont, the actress, who was sixty-five years of
 age.
 
 ``That was the most beautiful part of dear Lord Nelson's character,''
-Miss Crawley said.  ``He went to the deuce for a woman.  There must be
+Miss Crawley said.  ``He went to the deuce for a woman.  There \emph{must} be
 good in a man who will do that.  I adore all impudent matches.---  What
 I like best, is for a nobleman to marry a miller's daughter, as Lord
 Flowerdale did---it makes all the women so angry---I wish some great man
-would run away with you, my dear; I'm sure you're pretty enough.''
+would run away with \emph{you,} my dear; I'm sure you're pretty enough.''
 
-``Two post-boys!---Oh, it would be delightful!'' Rebecca owned.
+``Two post-boys!---Oh, it would be delightful!''\ Rebecca owned.
 
 ``And what I like next best, is for a poor fellow to run away with a
 rich girl.  I have set my heart on Rawdon running away with some one.''
@@ -4646,10 +4683,10 @@ rich girl.  I have set my heart on Rawdon running away with some one.''
 ``A rich some one, or a poor some one?''
 
 ``Why, you goose! Rawdon has not a shilling but what I give him.  He is
-crible de dettes---he must repair his fortunes, and succeed in the
+\foreign{cribl\'e de dettes}---he must repair his fortunes, and succeed in the
 world.''
 
-``Is he very clever?'' Rebecca asked.
+``Is he very clever?''\ Rebecca asked.
 
 ``Clever, my love?---not an idea in the world beyond his horses, and his
 regiment, and his hunting, and his play; but he must succeed---he's so
@@ -4688,10 +4725,10 @@ the young lady to the Rectory, and not only her, but Rawdon Crawley,
 her husband's rival in the Old Maid's five per cents! They became very
 fond of each other's society, Mrs.\ Crawley and her nephew.  He gave up
 hunting; he declined entertainments at Fuddleston: he would not dine
-with the mess of the depot at Mudbury: his great pleasure was to stroll
+with the mess of the dep\^ot at Mudbury: his great pleasure was to stroll
 over to Crawley parsonage---whither Miss Crawley came too; and as their
 mamma was ill, why not the children with Miss Sharp? So the children
-(little dears!) came with Miss Sharp; and of an evening some of the
+(little dears!)\ came with Miss Sharp; and of an evening some of the
 party would walk back together.  Not Miss Crawley---she preferred her
 carriage---but the walk over the Rectory fields, and in at the little
 park wicket, and through the dark plantation, and up the checkered
@@ -4719,13 +4756,12 @@ occupied from his study-window, and with dreadful oaths swore that if
 it wasn't for Miss Crawley, he'd take Rawdon and bundle un out of
 doors, like a rogue as he was.
 
-``He be a bad'n, sure enough,'' Mr.\ Horrocks remarked; ``and his man
+``He \emph{be} a bad'n, sure enough,'' Mr.\ Horrocks remarked; ``and his man
 Flethers is wuss, and have made such a row in the housekeeper's room
 about the dinners and hale, as no lord would make---but I think Miss
 Sharp's a match for'n, Sir Pitt,'' he added, after a pause.
 
 And so, in truth, she was---for father and son too.
-
 
 
 \chapter{Quite a Sentimental Chapter}
@@ -4735,19 +4771,19 @@ the rural virtues there, and travel back to London, to inquire what has
 become of Miss Amelia.
 
 ``We don't care a fig for her,'' writes some unknown correspondent with a
-pretty little handwriting and a pink seal to her note.  ``She is fade and
+pretty little handwriting and a pink seal to her note.  ``She is \emph{fade} and
 insipid,'' and adds some more kind remarks in this strain, which I should
 never have repeated at all, but that they are in truth prodigiously
 complimentary to the young lady whom they concern.
 
 Has the beloved reader, in his experience of society, never heard
 similar remarks by good-natured female friends; who always wonder what
-you CAN see in Miss Smith that is so fascinating; or what COULD induce
+you CAN see in Miss Smith that is so fascinating; or what \emph{could} induce
 Major Jones to propose for that silly insignificant simpering Miss
 Thompson, who has nothing but her wax-doll face to recommend her? What
 is there in a pair of pink cheeks and blue eyes forsooth? these dear
 Moralists ask, and hint wisely that the gifts of genius, the
-accomplishments of the mind, the mastery of Mangnall's Questions, and a
+accomplishments of the mind, the mastery of Mangnall's Questions, and a % HOGG: should we \textit{Questions}?
 ladylike knowledge of botany and geology, the knack of making poetry,
 the power of rattling sonatas in the Herz-manner, and so forth, are far
 more valuable endowments for a female, than those fugitive charms which
@@ -4760,13 +4796,13 @@ put in mind of the fate which awaits them; and though, very likely, the
 heroic female character which ladies admire is a more glorious and
 beautiful object than the kind, fresh, smiling, artless, tender little
 domestic goddess, whom men are inclined to worship---yet the latter and
-inferior sort of women must have this consolation---that the men do
+inferior sort of women must have this consolation---that the men \emph{do}
 admire them after all; and that, in spite of all our kind friends'
 warnings and protests, we go on in our desperate error and folly, and
 shall to the end of the chapter. Indeed, for my own part, though I have
 been repeatedly told by persons for whom I have the greatest respect,
 that Miss Brown is an insignificant chit, and Mrs.\ White has nothing
-but her petit minois chiffonne, and Mrs.\ Black has not a word to say
+but her \foreign{petit minois chiffonn\'e,} and Mrs.\ Black has not a word to say
 for herself; yet I know that I have had the most delightful
 conversations with Mrs.\ Black (of course, my dear Madam, they are
 inviolable): I see all the men in a cluster round Mrs.\ White's chair:
@@ -4799,14 +4835,14 @@ were pompous and orderly, and all their amusements intolerably dull and
 decorous. After every one of her visits (and oh how glad she was when
 they were over!) Miss Osborne and Miss Maria Osborne, and Miss Wirt,
 the vestal governess, asked each other with increased wonder, ``What
-could George find in that creature?''
+\emph{could} George find in that creature?''
 
 How is this? some carping reader exclaims.  How is it that Amelia, who
 had such a number of friends at school, and was so beloved there, comes
 out into the world and is spurned by her discriminating sex? My dear
 sir, there were no men at Miss Pinkerton's establishment except the old
 dancing-master; and you would not have had the girls fall out about
-HIM? When George, their handsome brother, ran off directly after
+\emph{him}? When George, their handsome brother, ran off directly after
 breakfast, and dined from home half-a-dozen times a week, no wonder the
 neglected sisters felt a little vexation.  When young Bullock (of the
 firm of Hulker, Bullock \& Co., Bankers, Lombard Street), who had been
@@ -4816,9 +4852,9 @@ be pleased? And yet she said she was, like an artless forgiving
 creature.  ``I'm so delighted you like dear Amelia,'' she said quite
 eagerly to Mr.\ Bullock after the dance.  ``She's engaged to my brother
 George; there's not much in her, but she's the best-natured and most
-unaffected young creature: at home we're all so fond of her.'' Dear
+unaffected young creature: at home we're all \emph{so} fond of her.'' Dear
 girl! who can calculate the depth of affection expressed in that
-enthusiastic SO?
+enthusiastic \emph{so}? % HOGG: search for }? and ?}... consistency!
 
 Miss Wirt and these two affectionate young women so earnestly and
 frequently impressed upon George Osborne's mind the enormity of the
@@ -5156,7 +5192,7 @@ starting up.
 
 ``In other words, you ask me if I'm a man of honour,'' said Osborne,
 fiercely; ``is that what you mean? You've adopted such a tone regarding
-me lately that I'm --------- if I'll bear it any more.''
+me lately that I'm ------ if I'll bear it any more.''
 
 ``What have I done? I've told you you were neglecting a sweet girl,
 George.  I've told you that when you go to town you ought to go to her,
@@ -5806,7 +5842,7 @@ have news of the invalid from her little confidential messenger.
 
 At dinner---to which meal she descended for half an hour---she kept the
 peace between them: after which she disappeared for the night; when
-Rawdon would ride over to the depot of the 150th at Mudbury, leaving
+Rawdon would ride over to the dep\^ot of the 150th at Mudbury, leaving
 his papa to the society of Mr.\ Horrocks and his rum and water. She
 passed as weary a fortnight as ever mortal spent in Miss Crawley's
 sick-room; but her little nerves seemed to be of iron, as she was quite
@@ -8297,7 +8333,7 @@ a governess!  There was something about the girl, too.''
 Squills remarked.  ``There is something about her; and Crawley was a
 fool, Squills.''
 
-``A d--------- fool---always was,'' the apothecary replied.
+``A d------ fool---always was,'' the apothecary replied.
 
 ``Of course the old girl will fling him over,'' said the physician, and
 after a pause added, ``She'll cut up well, I suppose.''
@@ -8833,7 +8869,7 @@ of his chief informants, would have liked to make a bid for her himself
 Osborne.  But not being able to secure her as a wife, the disinterested
 Fred quite approved of her as a sister-in-law.  ``Let George cut in
 directly and win her,'' was his advice.  ``Strike while the iron's hot,
-you know---while she's fresh to the town: in a few weeks some d---------
+you know---while she's fresh to the town: in a few weeks some d------
 fellow from the West End will come in with a title and a rotten
 rent-roll and cut all us City men out, as Lord Fitzrufus did last year
 with Miss Grogram, who was actually engaged to Podder, of Podder \&
@@ -8971,7 +9007,7 @@ Jove, Will, it was all I I could do to prevent myself from throwing the
 sofa-cushion at her.'' He restrained that exhibition of sentiment,
 however.
 
-The sisters began to play the Battle of Prague.  ``Stop that d---------
+The sisters began to play the Battle of Prague.  ``Stop that d------
 thing,'' George howled out in a fury from the sofa.  ``It makes me mad.
 You play us something, Miss Swartz, do.  Sing something, anything but
 the Battle of Prague.''
@@ -9103,7 +9139,7 @@ and that that---that you---that I say---''
 ``That what, sir?'' George asked, with scarcely a sneer, filling another
 glass of claret.
 
-``---------!'' burst out his father with a screaming oath---``that the name of
+``------!'' burst out his father with a screaming oath---``that the name of
 those Sedleys never be mentioned here, sir---not one of the whole damned
 lot of 'em, sir.''
 
@@ -9206,7 +9242,7 @@ that event took place.  At length Captain Osborne made his appearance,
 very smartly dressed, but very pale and agitated as we have said.  He
 wiped his pale face with a large yellow bandanna pocket-handkerchief
 that was prodigiously scented. He shook hands with Dobbin, looked at
-the clock, and told John, the waiter, to bring him some curacao.  Of
+the clock, and told John, the waiter, to bring him some cura\c{c}ao.  Of
 this cordial he swallowed off a couple of glasses with nervous
 eagerness. His friend asked with some interest about his health.
 
@@ -9855,7 +9891,7 @@ We shall have the first of the fight, sir; and depend on it Boney will
 take care that it shall be a hard one.''
 
 ``What are you driving at, Dobbin?'' his interlocutor said, uneasy and
-with a scowl.  ``I suppose no Briton's afraid of any d--------- Frenchman,
+with a scowl.  ``I suppose no Briton's afraid of any d------ Frenchman,
 hey?''
 
 ``I only mean, that before we go, and considering the great and certain
@@ -9916,11 +9952,11 @@ entered,'' the ambassador said, gravely.
 
 ``What engagements? What the devil do you mean? You don't mean,'' Mr.\ %
 Osborne continued, gathering wrath and astonishment as the thought now
-first came upon him; ``you don't mean that he's such a d--------- fool as to
+first came upon him; ``you don't mean that he's such a d------ fool as to
 be still hankering after that swindling old bankrupt's daughter? You've
 not come here for to make me suppose that he wants to marry HER?  Marry
 HER, that IS a good one.  My son and heir marry a beggar's girl out of
-a gutter.  D--------- him, if he does, let him buy a broom and sweep a
+a gutter.  D------ him, if he does, let him buy a broom and sweep a
 crossing.  She was always dangling and ogling after him, I recollect
 now; and I've no doubt she was put on by her old sharper of a father.''
 
@@ -10086,7 +10122,7 @@ name in Kew Gardens.  What City man could show such another? Could a
 prince have been better cared for?  Anything that money could buy had
 been his son's.  He used to go down on speech-days with four horses and
 new liveries, and scatter new shillings among the boys at the school
-where George was:  when he went with George to the depot of his
+where George was:  when he went with George to the dep\^ot of his
 regiment, before the boy embarked for Canada, he gave the officers such
 a dinner as the Duke of York might have sat down to.  Had he ever
 refused a bill when George drew one? There they were---paid without a
@@ -10418,6 +10454,9 @@ your agents upon your receipt for the same, by
                           ``Your obedient Servt.,
                                            ``S. HIGGS.
 
+~
+
+\noindent
 ``P.\,S.---Mr.\ Osborne desires me to say, once for all, that he declines to
 receive any messages, letters, or communications from you on this or
 any other subject.
@@ -12032,8 +12071,8 @@ honeymoon.  She wrote the most piteous accounts of the feast home to
 her mamma:  how the Countess of Bareacres would not answer when spoken
 to; how Lady Blanche stared at her with her eye-glass; and what a rage
 Captain Dobbin was in at their behaviour; and how my lord, as they came
-away from the feast, asked to see the bill, and pronounced it a d---------
-bad dinner, and d--------- dear.  But though Amelia told all these stories,
+away from the feast, asked to see the bill, and pronounced it a d------
+bad dinner, and d------ dear.  But though Amelia told all these stories,
 and wrote home regarding her guests' rudeness, and her own
 discomfiture, old Mrs.\ Sedley was mightily pleased nevertheless, and
 talked about Emmy's friend, the Countess of Bareacres, with such
@@ -12099,7 +12138,7 @@ the cop at the Curragh,'' the Major's wife was exclaiming, and was
 continuing the family history, when her husband interrupted her by
 saying---
 
-``It's General Tufto, who commands the --------- cavalry division''; adding
+``It's General Tufto, who commands the ------ cavalry division''; adding
 quietly, ``he and I were both shot in the same leg at Talavera.''
 
 ``Where you got your step,'' said George with a laugh. ``General Tufto!
@@ -12282,11 +12321,11 @@ went on with killing haughtiness.
 ``Not Captain George, you stupid man; Captain Osborne,'' Rebecca said.
 The General all the while was looking savagely from one to the other.
 
-``Captain Osborne, indeed! Any relation to the L--------- Osbornes?''
+``Captain Osborne, indeed! Any relation to the L------ Osbornes?''
 
 ``We bear the same arms,'' George said, as indeed was the fact; Mr.\ %
 Osborne having consulted with a herald in Long Acre, and picked the
-L--------- arms out of the peerage, when he set up his carriage fifteen
+L------ arms out of the peerage, when he set up his carriage fifteen
 years before.  The General made no reply to this announcement; but took
 up his opera-glass---the double-barrelled lorgnon was not invented in
 those days---and pretended to examine the house; but Rebecca saw that
@@ -12969,7 +13008,7 @@ matters Dobbin estimated quite correctly.
 
 ``And you'll see her safe out of Brussels in the event of a defeat?''
 
-``A defeat! D--------- it, sir, it's impossible.  Don't try and frighten ME,''
+``A defeat! D------ it, sir, it's impossible.  Don't try and frighten ME,''
 the hero cried from his bed; and Dobbin's mind was thus perfectly set
 at ease now that Jos had spoken out so resolutely respecting his
 conduct to his sister.  ``At least,'' thought the Captain, ``there will be
@@ -14469,7 +14508,7 @@ hurried smuggled notes, and pop them into the post in private. The one
 dreadful secret which weighed upon her life was, that she and the old
 housekeeper had been to pay Southdown a furtive visit at his chambers
 in the Albany; and found him---O the naughty dear abandoned
-wretch!---smoking a cigar with a bottle of Curacao before him.  She
+wretch!---smoking a cigar with a bottle of Cura\c{c}ao before him.  She
 admired her sister, she adored her mother, she thought Mr.\ Crawley the
 most delightful and accomplished of men, after Southdown, that fallen
 angel:  and her mamma and sister, who were ladies of the most superior
@@ -14848,7 +14887,7 @@ with the old lady.  He's very near getting his degree, you know.  He's
 only been plucked twice---so was I---but he's had the advantages of
 Oxford and a university education.  He knows some of the best chaps
 there. He pulls stroke in the Boniface boat.  He's a handsome feller.
-D--------- it, ma'am, let's put him on the old woman, hey, and tell him to
+D------ it, ma'am, let's put him on the old woman, hey, and tell him to
 thrash Pitt if he says anything. Ha, ha, ha!
 
 ``Jim might go down and see her, certainly,'' the housewife said; adding
@@ -18889,7 +18928,7 @@ subjugate Major Dobbin by her endearments, it must be owned that
 Glorvina had practised them a good deal elsewhere.  She had had a
 season in Dublin, and who knows how many in Cork, Killarney, and
 Mallow? She had flirted with all the marriageable officers whom the
-depots of her country afforded, and all the bachelor squires who seemed
+dep\^ots of her country afforded, and all the bachelor squires who seemed
 eligible.  She had been engaged to be married a half-score times in
 Ireland, besides the clergyman at Bath who used her so ill. She had
 flirted all the way to Madras with the Captain and chief mate of the
@@ -19962,7 +20001,7 @@ hold up their heads yet, and be able to give a friend a dish of tea
 still, after the storms and disappointments of their early life. Sedley
 still maintained his ascendency over the family of Mr.\ Clapp, his
 ex-clerk.  Clapp remembered the time when, sitting on the edge of the
-chair, he tossed off a bumper to the health of ``Mrs.\ S---------, Miss Emmy,
+chair, he tossed off a bumper to the health of ``Mrs.\ S------, Miss Emmy,
 and Mr.\ Joseph in India,'' at the merchant's rich table in Russell
 Square.  Time magnified the splendour of those recollections in the
 honest clerk's bosom.  Whenever he came up from the kitchen-parlour to
@@ -19973,7 +20012,7 @@ done in the days of their utmost prosperity.  He thought Miss 'Melia's
 playing the divinest music ever performed, and her the finest lady. He
 never would sit down before Sedley at the club even, nor would he have
 that gentleman's character abused by any member of the society.  He had
-seen the first men in London shaking hands with Mr.\ S---------; he said, ``He'd
+seen the first men in London shaking hands with Mr.\ S------; he said, ``He'd
 known him in times when Rothschild might be seen on 'Change with him
 any day, and he owed him personally everythink.''
 
@@ -20303,7 +20342,7 @@ that of any of the other stables.  But many a little close carriage has
 stopped at that door, as my informant (little Tom Eaves, who knows
 everything, and who showed me the place) told me. ``The Prince and
 Perdita have been in and out of that door, sir,'' he had often told me;
-``Marianne Clarke has entered it with the Duke of ---------. It conducts to
+``Marianne Clarke has entered it with the Duke of ------. It conducts to
 the famous petits appartements of Lord Steyne---one, sir, fitted up all
 in ivory and white satin, another in ebony and black velvet; there is a
 little banqueting-room taken from Sallust's house at Pompeii, and
@@ -20999,7 +21038,7 @@ everything.  She shall never leave me, until we are ruined utterly
 ourselves, which does not seem far off, or until I can pay her the
 utmost farthing.''
 
-``--------- it, how much is it?'' said the Peer with an oath. And Becky,
+``------ it, how much is it?'' said the Peer with an oath. And Becky,
 reflecting on the largeness of his means, mentioned not only the sum
 which she had borrowed from Miss Briggs, but one of nearly double the
 amount.
@@ -21145,7 +21184,7 @@ by even hinting that it requires a defence.  You will be pleased to
 receive her with the utmost cordiality, as you will receive all persons
 whom I present in this house.  This house?'' He broke out with a laugh.
 ``Who is the master of it? and what is it? This Temple of Virtue belongs
-to me.  And if I invite all Newgate or all Bedlam here, by --------- they
+to me.  And if I invite all Newgate or all Bedlam here, by ------ they
 shall be welcome.''
 
 After this vigorous allocution, to one of which sort Lord Steyne
@@ -21602,7 +21641,7 @@ he went out.  ``She shan't want for nothing.  Send her a hundred pound.''
 
 ``And I'll go and see her to-morrow?'' Miss Osborne asked.
 
-``That's your look out.  She don't come in here, mind. No, by ---------,
+``That's your look out.  She don't come in here, mind. No, by ------,
 not for all the money in London.  But she mustn't want now.  So look
 out, and get things right.'' With which brief speeches Mr.\ Osborne took
 leave of his daughter and went on his accustomed way into the City.
@@ -23150,7 +23189,7 @@ He thought a trap had been laid for him, and was as furious with the
 wife as with the husband.  ``You innocent!  Damn you,'' he screamed out.
 ``You innocent!  Why every trinket you have on your body is paid for by
 me. I have given you thousands of pounds, which this fellow has spent
-and for which he has sold you.  Innocent, by ---------! You're as innocent as
+and for which he has sold you.  Innocent, by ------! You're as innocent as
 your mother, the ballet-girl, and your husband the bully.  Don't think
 to frighten me as you have done others. Make way, sir, and let me
 pass''; and Lord Steyne seized up his hat, and, with flame in his eyes,
@@ -23956,7 +23995,7 @@ infernal, they don't enjoy it long. Liverseege died after eighteen
 months of it, and the man before went off in six weeks, I hear.''
 
 ``Some people say his brother is a very clever man.  I always found him
-a d--------- bore,'' Smith ejaculated.  ``He must have good interest, though.
+a d------ bore,'' Smith ejaculated.  ``He must have good interest, though.
 He must have got the Colonel the place.''
 
 ``He!'' said Brown, with a sneer.  ``Pooh.  It was Lord Steyne got it.''
@@ -24038,7 +24077,7 @@ whom my friend is indebted for this piece of patronage?''
 ``To one of the most generous and kindest men in the world, as he is one
 of the greatest---to my excellent friend, the Marquis of Steyne.''
 
-``I'll see him d--------- before I take his place,'' growled out Rawdon.
+``I'll see him d------ before I take his place,'' growled out Rawdon.
 
 ``You are irritated against my noble friend,'' Mr.\ Wenham calmly resumed;
 ``and now, in the name of common sense and justice, tell me why?''
@@ -24131,7 +24170,7 @@ and that, however innocent, the common people would insist that he was
 guilty.  In fine, I implored him not to send the challenge.''
 
 ``I don't believe one word of the whole story,'' said Rawdon, grinding
-his teeth.  ``I believe it a d--------- lie, and that you're in it, Mr.\ %
+his teeth.  ``I believe it a d------ lie, and that you're in it, Mr.\ %
 Wenham.  If the challenge don't come from him, by Jove it shall come
 from me.''
 
@@ -26872,7 +26911,7 @@ of the couriers looking on.
 ``\foreign{Nous allons avoir une belle traversee, Monsieur George,}'' said the
 courier with a grin, as he lifted his gold-laced cap.
 
-``D--------- your French,'' said the young gentleman, ``where's the biscuits,
+``D------ your French,'' said the young gentleman, ``where's the biscuits,
 ay?'' Whereupon Kirsch answered him in the English language or in such
 an imitation of it as he could command---for though he was familiar with
 all languages, Mr.\ Kirsch was not acquainted with a single one, and
@@ -28016,7 +28055,7 @@ May Fair,'' she told an old London friend who met her, ``only, their
 dresses are not quite so fresh.  The men wear cleaned gloves, and are
 sad rogues, certainly, but they are not worse than Jack This and Tom
 That.  The mistress of the house is a little vulgar, but I don't think
-she is so vulgar as Lady ---------'' and here she named the name of a great
+she is so vulgar as Lady ------'' and here she named the name of a great
 leader of fashion that I would die rather than reveal.  In fact, when
 you saw Madame de Saint Amour's rooms lighted up of a night, men with
 plaques and cordons at the ecarte tables, and the women at a little
